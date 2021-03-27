@@ -22,7 +22,7 @@ export class PokedexListComponent implements OnInit {
       this.currentPokedex = pokedex.results;
       for (let i = 0; i < this.currentPokedex.length; i++) {
         this.pokedexService.getSinglePokemon(pokedex.results[i].url).subscribe(imgs => {
-            this.currentPokedex[i].img = imgs.sprites.other.dream_world.front_default;
+            this.currentPokedex[i].img = imgs.sprites.front_default;
           })
         }
         this.isPokedexLoaded = true;
@@ -34,10 +34,12 @@ export class PokedexListComponent implements OnInit {
     this.currentGenerationUrl = this.pokedexService.selectedGeneration;
   }
 
-/*   ngDoCheck() : void {
-    if(this.pokedexService.selectedGeneration !== this.pokedexService.url){
+  ngDoCheck() : void {
+    if(this.pokedexService.selectedGeneration !== this.currentGenerationUrl){
       this.getPokedexByGen();
+      this.currentGenerationUrl = this.pokedexService.selectedGeneration;
+      this.isPokedexLoaded = false;
     }
-  } */
+  }
 
 }
