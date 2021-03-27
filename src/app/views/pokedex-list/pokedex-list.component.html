@@ -1,0 +1,10 @@
+<div class="view-container">
+    <app-spinner *ngIf="!isPokedexLoaded"></app-spinner>
+
+    <div class="pokedexList" *ngIf="isPokedexLoaded">
+        <div *ngFor="let pokemon of currentPokedex" class="pokemon-container">
+            <img [src]="pokemon.img" [alt]="pokemon.name">
+            <p>{{pokemon.name}}</p>
+        </div>
+    </div>
+</div>
