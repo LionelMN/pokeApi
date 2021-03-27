@@ -1,0 +1,21 @@
+<div class="navbar-container" [ngClass]="{displayedList : isHovered}">
+    <div class="logo-container">
+        <img src="#" alt="Pokéball" class="logo">
+    </div>
+    <div class="filterByGeneration" (mouseenter)="onHover()" (mouseleave)="onHover()">
+        <p>Filter by generation</p>
+        <ul>
+            <li class="generation" [hidden]="isHovered === false" (click)="sendGeneration('?offset=0&limit=151')">First generation</li>
+            <li class="generation" [hidden]="isHovered === false" (click)="sendGeneration('?offset=151&limit=100')">Second generation</li>
+            <li class="generation" [hidden]="isHovered === false" (click)="sendGeneration('?offset=251&limit=135')">Third generation</li>
+            <li class="generation" [hidden]="isHovered === false" (click)="sendGeneration('?offset=386&limit=107')">Forth generation</li>
+            <li class="generation" [hidden]="isHovered === false" (click)="sendGeneration('?offset=493&limit=156')">Fith generation</li>
+            <li class="generation" [hidden]="isHovered === false" (click)="sendGeneration('?offset=649&limit=72')">Sixth generation</li>
+            <li class="generation" [hidden]="isHovered === false" (click)="sendGeneration('?offset=721&limit=88')">Seventh generation</li>
+            <li class="generation" [hidden]="isHovered === false" (click)="sendGeneration('?offset=809&limit=89')">Eigth generation</li>
+        </ul>
+    </div>
+    <div class="searchbar">
+        <input type="text" placeholder="Search a Pokémon" />
+    </div>
+</div>

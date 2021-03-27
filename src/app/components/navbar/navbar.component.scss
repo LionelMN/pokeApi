@@ -1,0 +1,42 @@
+.navbar-container{
+    font-family: 'Karla', sans-serif;
+    height: 1.5rem;
+    background: var(--primary-bgColor);
+    display: grid;
+    grid-template-columns: 9% 71% 19%;
+    gap: 0.5%;
+    padding: 1rem;
+    color: white;
+    transition: 1s;
+    .filterByGeneration{
+        text-align: center;
+        overflow: hidden;
+        ul {
+            list-style: none;
+            display: flex;
+            margin-top: 1rem;
+        }
+        .generation{
+            cursor: pointer;
+            margin-right: 0.5rem;
+        }
+        .generation:hover{
+            font-weight: 600;
+        }
+    }
+    .searchbar{
+        input{
+            outline: none;
+            border: none;
+            border-radius: 5px;
+            padding: 0.2rem 0 0.2rem 0.3rem;
+            transition: 1s;
+        }
+        input:focus {
+            box-shadow: inset 0px 0px 5px 2px blue;
+        }
+    }
+}
+.displayedList{
+    height: 5rem;
+}
