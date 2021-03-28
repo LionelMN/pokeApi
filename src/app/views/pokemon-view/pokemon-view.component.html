@@ -1,0 +1,5 @@
+<a routerLink="/">Atrás</a>
+<app-spinner *ngIf="!isContentLoaded"></app-spinner>
+<div class="pokemon-container" *ngIf="isContentLoaded">
+    {{pokemon.name}}
+</div>

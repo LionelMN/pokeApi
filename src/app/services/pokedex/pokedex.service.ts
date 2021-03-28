@@ -17,11 +17,15 @@ export class PokedexService {
   constructor(private http : HttpClient) { }
 
   public getAllPokemon() : Observable<any>{
-    return this.http.get(`${this.url}${this.selectedGeneration}`) as Observable<any>
+    return this.http.get(`${this.url}${this.selectedGeneration}`) as Observable<any>;
   }
 
   public getSinglePokemon(singlePokemonUrl) : Observable<any>{
-    return this.http.get(`${singlePokemonUrl}`) as Observable<any>
+    return this.http.get(`${singlePokemonUrl}`) as Observable<any>;
+  }
+
+  public getSinglePokemonById(id) : Observable<any>{
+    return this.http.get(`${this.url}/${id}`) as Observable<any>;
   }
 
 }
