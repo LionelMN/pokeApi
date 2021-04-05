@@ -5,8 +5,8 @@
     <div class="filterByGeneration" (mouseenter)="onHover()" (mouseleave)="onHover()">
         <p>Filter by generation</p>
         <ul>
-            <li class="generation" [hidden]="isHovered === false" (click)="sendGeneration('?offset=0&limit=151')">First generation</li>
-            <li class="generation" [hidden]="isHovered === false" (click)="sendGeneration('?offset=151&limit=100')">Second generation</li>
+            <li class="generation" [hidden]="isHovered === false" routerLink="/" (click)="sendGeneration('?offset=0&limit=151')">First generation</li>
+            <li class="generation" [hidden]="isHovered === false" routerLink="/" (click)="sendGeneration('?offset=151&limit=100')">Second generation</li>
             <li class="generation" [hidden]="isHovered === false" (click)="sendGeneration('?offset=251&limit=135')">Third generation</li>
             <li class="generation" [hidden]="isHovered === false" (click)="sendGeneration('?offset=386&limit=107')">Forth generation</li>
             <li class="generation" [hidden]="isHovered === false" (click)="sendGeneration('?offset=493&limit=156')">Fith generation</li>

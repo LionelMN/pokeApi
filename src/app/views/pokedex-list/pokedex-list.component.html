@@ -3,8 +3,10 @@
 
     <div class="pokedexList" *ngIf="isPokedexLoaded">
         <div *ngFor="let pokemon of currentPokedex" class="pokemon-container">
-            <img [src]="pokemon.img" [alt]="pokemon.name">
-            <p>{{pokemon.name}}</p>
+            <a routerLink="/pokemon/{{pokemon.id}}" routerLinkActive="active">
+                <img [src]="pokemon.img" [alt]="pokemon.name">
+                <p>{{pokemon.name}}</p>
+            </a>
         </div>
     </div>
 </div>

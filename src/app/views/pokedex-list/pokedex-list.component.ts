@@ -21,8 +21,9 @@ export class PokedexListComponent implements OnInit {
     this.pokedexService.getAllPokemon().subscribe(pokedex => {
       this.currentPokedex = pokedex.results;
       for (let i = 0; i < this.currentPokedex.length; i++) {
-        this.pokedexService.getSinglePokemon(pokedex.results[i].url).subscribe(imgs => {
-            this.currentPokedex[i].img = imgs.sprites.front_default;
+        this.pokedexService.getSinglePokemon(pokedex.results[i].url).subscribe(pokemon => {
+            this.currentPokedex[i].id = pokemon.id;
+            this.currentPokedex[i].img = pokemon.sprites.other['official-artwork'].front_default;
           })
         }
         this.isPokedexLoaded = true;
