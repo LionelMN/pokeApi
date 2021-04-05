@@ -1,0 +1,482 @@
+table{
+  text-align: center;
+  vertical-align: middle;
+  margin: 0.5rem;
+  padding: 0.5rem 0.1rem;
+  border-radius: 10px;
+  tr{
+    background: rgba(255, 255, 255, 0.4);
+    th {
+      width: 120rem;
+      border: 1px solid var(--terciary-bgColor);
+      border-radius: 5px;
+      font-weight: 900;
+    }
+    td {
+      text-align: center;
+      width: 100rem;
+      border: 1px solid var(--terciary-bgColor);
+      margin: 0;
+    }
+  }
+  .genOne{
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    &::before{
+      content: '';
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      bottom: 2px;
+      width: 50%;
+      background: red;
+      transform: skew(345deg);
+      z-index: -1;
+    }
+    &::after{
+      content: '';
+      position: absolute;
+      top: 2px;
+      right: 2px;
+      bottom: 2px;
+      width: 50%;
+      background: blue;
+      transform: skew(345deg);
+      z-index: -1;
+    }
+  }
+  .genTwo{
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    &::before{
+      content: '';
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      bottom: 2px;
+      width: 50%;
+      background: gold;
+      transform: skew(345deg);
+      z-index: -1;
+    }
+    &::after{
+      content: '';
+      position: absolute;
+      top: 2px;
+      right: 2px;
+      bottom: 2px;
+      width: 50%;
+      background: silver;
+      transform: skew(345deg);
+      z-index: -1;
+    }
+    .gold{
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      &::after{
+        content: '';
+        position: absolute;
+        top: 2px;
+        right: 2px;
+        bottom: 2px;
+        width: 50%;
+        background: gold;
+        transform: skew(345deg);
+        z-index: -1;
+      }
+    }
+    .silver{
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      &::after{
+        content: '';
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        bottom: 2px;
+        width: 50%;
+        background: silver;
+        transform: skew(345deg);
+        z-index: -1;
+      }
+    }
+    .crystal{
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      &::after{
+        content: '';
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        right: 2px;
+        bottom: 2px;
+        width: 100%;
+        background: lightblue;
+        transform: skew(345deg);
+        z-index: -1;
+      }
+    }
+  }
+  .genThree{
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    &::before{
+      content: '';
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      bottom: 2px;
+      width: 50%;
+      background: red;
+      transform: skew(345deg);
+      z-index: -1;
+    }
+    &::after{
+      content: '';
+      position: absolute;
+      top: 2px;
+      right: 2px;
+      bottom: 2px;
+      width: 50%;
+      background: blue;
+      transform: skew(345deg);
+      z-index: -1;
+    }
+    .rubySapphire{
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      &::before{
+        content: '';
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        bottom: 2px;
+        width: 50%;
+        background: blue;
+        transform: skew(45deg);
+        z-index: -1;
+      }
+      &::after{
+        content: '';
+        position: absolute;
+        top: 2px;
+        right: 2px;
+        bottom: 2px;
+        width: 50%;
+        background: red;
+        transform: skew(345deg);
+        z-index: -1;
+      }
+    }
+    .fireRedLeafGreen{
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      &::before{
+        content: '';
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        bottom: 2px;
+        width: 50%;
+        background: green;
+        transform: skew(45deg);
+        z-index: -1;
+      }
+      &::after{
+        content: '';
+        position: absolute;
+        top: 2px;
+        right: 2px;
+        bottom: 2px;
+        width: 50%;
+        background: red;
+        transform: skew(345deg);
+        z-index: -1;
+      }
+    }
+    .emerald{
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      &::before{
+        content: '';
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        bottom: 2px;
+        width: 100%;
+        background: green;
+        transform: skew(345deg);
+        z-index: -1;
+      }
+    }
+  }
+  .genFour{
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    &::before{
+      content: '';
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      bottom: 2px;
+      width: 50%;
+      background: lightblue;
+      transform: skew(345deg);
+      z-index: -1;
+    }
+    &::after{
+      content: '';
+      position: absolute;
+      top: 2px;
+      right: 2px;
+      bottom: 2px;
+      width: 50%;
+      background: pink;
+      transform: skew(345deg);
+      z-index: -1;
+    }
+    .diamondPearl{
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      &::before{
+        content: '';
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        bottom: 2px;
+        width: 50%;
+        background: pink;
+        transform: skew(45deg);
+        z-index: -1;
+      }
+      &::after{
+        content: '';
+        position: absolute;
+        top: 2px;
+        right: 2px;
+        bottom: 2px;
+        width: 50%;
+        background: lightblue;
+        transform: skew(345deg);
+        z-index: -1;
+      }
+    }
+    .platinum{
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      &::before{
+        content: '';
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        right: 2px;
+        bottom: 2px;
+        width: 100%;
+        background: palegoldenrod;
+        transform: skew(345deg);
+        z-index: -1;
+      }
+    }
+    .heartgoldSoulsilver{
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      &::before{
+        content: '';
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        bottom: 2px;
+        width: 50%;
+        background: gold;
+        transform: skew(45deg);
+        z-index: -1;
+      }
+      &::after{
+        content: '';
+        position: absolute;
+        top: 2px;
+        right: 2px;
+        bottom: 2px;
+        width: 50%;
+        background: silver;
+        transform: skew(345deg);
+        z-index: -1;
+      }
+    }
+  }
+  .genFive{
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    &::before{
+      content: '';
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      bottom: 2px;
+      width: 50%;
+      background: black;
+      transform: skew(345deg);
+      z-index: -1;
+    }
+    &::after{
+      content: '';
+      position: absolute;
+      top: 2px;
+      right: 2px;
+      bottom: 2px;
+      width: 50%;
+      background: white;
+      transform: skew(345deg);
+      z-index: -1;
+    }
+  }
+  .genSix{
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    &::before{
+      content: '';
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      bottom: 2px;
+      width: 50%;
+      background: darkblue;
+      transform: skew(345deg);
+      z-index: -1;
+    }
+    &::after{
+      content: '';
+      position: absolute;
+      top: 2px;
+      right: 2px;
+      bottom: 2px;
+      width: 50%;
+      background: darkred;
+      transform: skew(345deg);
+      z-index: -1;
+    }
+    .xy{
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      &::before{
+        content: '';
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        bottom: 2px;
+        width: 50%;
+        background: darkred;
+        transform: skew(45deg);
+        z-index: -1;
+      }
+      &::after{
+        content: '';
+        position: absolute;
+        top: 2px;
+        right: 2px;
+        bottom: 2px;
+        width: 50%;
+        background: darkblue;
+        transform: skew(345deg);
+        z-index: -1;
+      }
+    }
+    .omegaAlpha{
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      &::before{
+        content: '';
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        bottom: 2px;
+        width: 50%;
+        background: red;
+        transform: skew(45deg);
+        z-index: -1;
+      }
+      &::after{
+        content: '';
+        position: absolute;
+        top: 2px;
+        right: 2px;
+        bottom: 2px;
+        width: 50%;
+        background: blue;
+        transform: skew(345deg);
+        z-index: -1;
+      }
+    }
+  }
+  .genSeven{
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    &::before{
+      content: '';
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      bottom: 2px;
+      width: 50%;
+      background: darkgoldenrod;
+      transform: skew(345deg);
+      z-index: -1;
+    }
+    &::after{
+      content: '';
+      position: absolute;
+      top: 2px;
+      right: 2px;
+      bottom: 2px;
+      width: 50%;
+      background: darkblue;
+      transform: skew(345deg);
+      z-index: -1;
+    }
+  }
+  .genEight{
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    &::before{
+      content: '';
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      bottom: 2px;
+      width: 50%;
+      background: crimson;
+      transform: skew(345deg);
+      z-index: -1;
+    }
+    &::after{
+      content: '';
+      position: absolute;
+      top: 2px;
+      right: 2px;
+      bottom: 2px;
+      width: 50%;
+      background: cornflowerblue;
+      transform: skew(345deg);
+      z-index: -1;
+    }
+  }
+}

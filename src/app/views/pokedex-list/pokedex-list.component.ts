@@ -23,7 +23,7 @@ export class PokedexListComponent implements OnInit {
       for (let i = 0; i < this.currentPokedex.length; i++) {
         this.pokedexService.getSinglePokemon(pokedex.results[i].url).subscribe(pokemon => {
             this.currentPokedex[i].id = pokemon.id;
-            this.currentPokedex[i].img = pokemon.sprites.front_default;
+            this.currentPokedex[i].img = pokemon.sprites.other['official-artwork'].front_default;
           })
         }
         this.isPokedexLoaded = true;

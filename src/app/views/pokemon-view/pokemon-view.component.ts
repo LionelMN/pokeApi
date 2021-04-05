@@ -29,8 +29,14 @@ export class PokemonViewComponent implements OnInit {
       this.pokemon = pokemon;
       this.isContentLoaded = true;
       console.log(this.pokemon)
-      console.log(pokemon)
     })
   }
+
+/*   ngDoCheck() : void {
+    if(parseInt(this.urlId) !== this.pokemon.id){
+      this.getPokemon(this.urlId);
+      this.isContentLoaded = false;
+    }
+  } */
 
 }
