@@ -1,4 +1,171 @@
-table{
+.nameBar{
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid white;
+  border-radius: 50px;
+  margin: 0 1rem;
+  padding: 0.5rem;
+  span{
+    text-transform: capitalize;
+    outline: none;
+    &:nth-child(1), &:nth-child(3){
+      cursor: pointer;
+      color: var(--terciary-bgColor);
+    }
+    &:nth-child(2){
+      font-size: 1.5rem;
+      letter-spacing: .5rem;
+      font-weight: 600;
+    }
+  }
+}
+
+.pokemonData{
+  position: relative;
+  display: grid;
+  grid-template-columns: 32% 68%;
+  margin-top: 1rem;
+  padding: 1rem 0.5rem;
+  color: white;
+  z-index: 1;
+  background: var(--forth-bgColor);
+  &::before{
+    position: absolute;
+    content: "";
+    top: -3px;
+    bottom: -3px;
+    left: -42px;
+    width: 30%;
+    background: var(--secondary-bgColor);
+    z-index: -1;
+    transform: skew(350deg);
+    box-shadow: 6px 0 10px 1px black;
+  }
+  img {
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 6px 10px 1px black;
+  }
+  .types{
+    display: flex;
+    .type{
+      color: black;
+      font-weight: 900;
+      letter-spacing: 0.05rem;
+      position: relative;
+      width: 60px;
+      border: 1px solid white;
+      border-radius: 5px;
+      text-align: center;
+      text-transform: capitalize;
+      padding: .3rem;
+      margin: 0 .5rem;
+      z-index: 1;
+      box-shadow: 0 1px 10px 1px black;
+      &::after{
+        content: '';
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        height: 35%;
+        background-color: rgba(0, 0, 0, 0.4);
+        z-index: -1;
+      }
+    }
+    .grass{
+      background-color: green;
+    }
+    .fire{
+      background-color: red;
+    }
+    .water{
+      background-color: blue;
+    }
+    .poison{
+      background-color: purple;
+    }
+    .flying{
+      background-color: lightskyblue;
+    }
+    .bug{
+      background-color: yellowgreen;
+    }
+    .normal{
+      background-color: darkgray;
+    }
+    .electric{
+      background-color: yellow;
+    }
+    .ground{
+      background-color: goldenrod;
+    }
+    .fairy{
+      background-color: pink;
+    }
+    .fighting{
+      background-color: darkred;
+    }
+    .psychic{
+      background-color: magenta;
+    }
+    .rock{
+      background-color: gray;
+    }
+    .steel{
+      background-color: lightgray;
+    }
+    .ice{
+      background-color: lightseagreen;
+    }
+    .ghost{
+      background-color: indigo;
+    }
+    .dragon{
+      background-color: darkblue;
+    }
+    .dark{
+      background-color: #423942;
+    }
+  }
+  .stats{
+    color: black;
+    width: 20rem;
+    border: 1px solid var(--terciary-bgColor);
+    border-radius: 5px;
+    text-transform: capitalize;
+    vertical-align: middle;
+    margin: 0.5rem;
+    background: rgba(255, 255, 255, 0.4);
+    tr {
+      th {
+        border-bottom: 1px solid var(--terciary-bgColor);
+        font-weight: 900;
+      }
+      td {
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        border-bottom: 2px solid var(--terciary-bgColor);
+        &:nth-child(1){
+          border-right: 2px solid var(--terciary-bgColor);
+        }
+        &:nth-child(2){
+          border-left: 2px solid var(--terciary-bgColor);
+        }
+      }
+      &:last-child{
+        td{
+          border-bottom: none;
+        }
+      }
+    }
+  }
+}
+
+table.sprites{
   text-align: center;
   vertical-align: middle;
   margin: 0.5rem;
@@ -148,56 +315,18 @@ table{
       transform: skew(345deg);
       z-index: -1;
     }
-    .rubySapphire{
-      position: relative;
-      overflow: hidden;
-      z-index: 1;
-      &::before{
-        content: '';
-        position: absolute;
-        top: 2px;
-        left: 2px;
-        bottom: 2px;
-        width: 50%;
-        background: blue;
-        transform: skew(45deg);
-        z-index: -1;
-      }
-      &::after{
-        content: '';
-        position: absolute;
-        top: 2px;
-        right: 2px;
-        bottom: 2px;
-        width: 50%;
-        background: red;
-        transform: skew(345deg);
-        z-index: -1;
-      }
-    }
     .fireRedLeafGreen{
       position: relative;
       overflow: hidden;
       z-index: 1;
-      &::before{
-        content: '';
-        position: absolute;
-        top: 2px;
-        left: 2px;
-        bottom: 2px;
-        width: 50%;
-        background: green;
-        transform: skew(45deg);
-        z-index: -1;
-      }
       &::after{
         content: '';
         position: absolute;
         top: 2px;
         right: 2px;
         bottom: 2px;
-        width: 50%;
-        background: red;
+        width: 50.3%;
+        background: green;
         transform: skew(345deg);
         z-index: -1;
       }
@@ -245,33 +374,6 @@ table{
       transform: skew(345deg);
       z-index: -1;
     }
-    .diamondPearl{
-      position: relative;
-      overflow: hidden;
-      z-index: 1;
-      &::before{
-        content: '';
-        position: absolute;
-        top: 2px;
-        left: 2px;
-        bottom: 2px;
-        width: 50%;
-        background: pink;
-        transform: skew(45deg);
-        z-index: -1;
-      }
-      &::after{
-        content: '';
-        position: absolute;
-        top: 2px;
-        right: 2px;
-        bottom: 2px;
-        width: 50%;
-        background: lightblue;
-        transform: skew(345deg);
-        z-index: -1;
-      }
-    }
     .platinum{
       position: relative;
       overflow: hidden;
@@ -301,7 +403,7 @@ table{
         bottom: 2px;
         width: 50%;
         background: gold;
-        transform: skew(45deg);
+        transform: skew(345deg);
         z-index: -1;
       }
       &::after{
@@ -370,33 +472,6 @@ table{
       transform: skew(345deg);
       z-index: -1;
     }
-    .xy{
-      position: relative;
-      overflow: hidden;
-      z-index: 1;
-      &::before{
-        content: '';
-        position: absolute;
-        top: 2px;
-        left: 2px;
-        bottom: 2px;
-        width: 50%;
-        background: darkred;
-        transform: skew(45deg);
-        z-index: -1;
-      }
-      &::after{
-        content: '';
-        position: absolute;
-        top: 2px;
-        right: 2px;
-        bottom: 2px;
-        width: 50%;
-        background: darkblue;
-        transform: skew(345deg);
-        z-index: -1;
-      }
-    }
     .omegaAlpha{
       position: relative;
       overflow: hidden;
@@ -409,7 +484,7 @@ table{
         bottom: 2px;
         width: 50%;
         background: red;
-        transform: skew(45deg);
+        transform: skew(345deg);
         z-index: -1;
       }
       &::after{
