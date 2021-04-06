@@ -28,7 +28,7 @@
   grid-template-columns: 32% 68%;
   margin-top: 1rem;
   padding: 1rem 0.5rem;
-  color: white;
+  color: #ffffff;
   z-index: 1;
   background: var(--forth-bgColor);
   &::before{
@@ -41,29 +41,28 @@
     background: var(--secondary-bgColor);
     z-index: -1;
     transform: skew(350deg);
-    box-shadow: 6px 0 10px 1px black;
+    box-shadow: 6px 0 10px 1px #000000;
   }
   img {
-    background: white;
+    background: #ffffff;
     border-radius: 50%;
-    box-shadow: 0 6px 10px 1px black;
+    box-shadow: 0 6px 10px 1px #000000;
   }
   .types{
     display: flex;
     .type{
-      color: black;
       font-weight: 900;
       letter-spacing: 0.05rem;
       position: relative;
       width: 60px;
-      border: 1px solid white;
+      border: 1px solid #ffffff;
       border-radius: 5px;
       text-align: center;
       text-transform: capitalize;
       padding: .3rem;
       margin: 0 .5rem;
       z-index: 1;
-      box-shadow: 0 1px 10px 1px black;
+      box-shadow: 0 1px 10px 1px #000000;
       &::after{
         content: '';
         position: absolute;
@@ -76,55 +75,55 @@
       }
     }
     .grass{
-      background-color: green;
+      background-color: #008000;
     }
     .fire{
-      background-color: red;
+      background-color: #ff0000;
     }
     .water{
-      background-color: blue;
+      background-color: #0000ff;
     }
     .poison{
-      background-color: purple;
+      background-color: #800080;
     }
     .flying{
-      background-color: lightskyblue;
+      background-color: #87cefa;
     }
     .bug{
-      background-color: yellowgreen;
+      background-color: #9acd32;
     }
     .normal{
-      background-color: darkgray;
+      background-color: #a9a9a9;
     }
     .electric{
-      background-color: yellow;
+      background-color: #e2e232;
     }
     .ground{
-      background-color: goldenrod;
+      background-color: #daa520;
     }
     .fairy{
-      background-color: pink;
+      background-color: #ffc0cb;
     }
     .fighting{
-      background-color: darkred;
+      background-color: #8b0000;
     }
     .psychic{
-      background-color: magenta;
+      background-color: #ff00ff;
     }
     .rock{
-      background-color: gray;
+      background-color: #808080;
     }
     .steel{
-      background-color: lightgray;
+      background-color: #d3d3d3;
     }
     .ice{
-      background-color: lightseagreen;
+      background-color: #20b2aa;
     }
     .ghost{
-      background-color: indigo;
+      background-color: #4b0082;
     }
     .dragon{
-      background-color: darkblue;
+      background-color: #00008b;
     }
     .dark{
       background-color: #423942;
@@ -197,7 +196,7 @@ table.sprites{
       left: 2px;
       bottom: 2px;
       width: 50%;
-      background: red;
+      background: #ff0000;
       transform: skew(345deg);
       z-index: -1;
     }
@@ -208,7 +207,7 @@ table.sprites{
       right: 2px;
       bottom: 2px;
       width: 50%;
-      background: blue;
+      background: #0000ff;
       transform: skew(345deg);
       z-index: -1;
     }
@@ -224,7 +223,7 @@ table.sprites{
       left: 2px;
       bottom: 2px;
       width: 50%;
-      background: gold;
+      background: #ffd900;
       transform: skew(345deg);
       z-index: -1;
     }
@@ -235,7 +234,7 @@ table.sprites{
       right: 2px;
       bottom: 2px;
       width: 50%;
-      background: silver;
+      background: #c0c0c0;
       transform: skew(345deg);
       z-index: -1;
     }
@@ -250,7 +249,7 @@ table.sprites{
         right: 2px;
         bottom: 2px;
         width: 50%;
-        background: gold;
+        background: #ffd900;
         transform: skew(345deg);
         z-index: -1;
       }
@@ -266,7 +265,7 @@ table.sprites{
         left: 2px;
         bottom: 2px;
         width: 50%;
-        background: silver;
+        background: #c0c0c0;
         transform: skew(345deg);
         z-index: -1;
       }
@@ -283,7 +282,7 @@ table.sprites{
         right: 2px;
         bottom: 2px;
         width: 100%;
-        background: lightblue;
+        background: #add8e6;
         transform: skew(345deg);
         z-index: -1;
       }
@@ -300,7 +299,7 @@ table.sprites{
       left: 2px;
       bottom: 2px;
       width: 50%;
-      background: red;
+      background: #ff0000;
       transform: skew(345deg);
       z-index: -1;
     }
@@ -311,7 +310,7 @@ table.sprites{
       right: 2px;
       bottom: 2px;
       width: 50%;
-      background: blue;
+      background: #0000ff;
       transform: skew(345deg);
       z-index: -1;
     }
@@ -326,7 +325,7 @@ table.sprites{
         right: 2px;
         bottom: 2px;
         width: 50.3%;
-        background: green;
+        background: #008000;
         transform: skew(345deg);
         z-index: -1;
       }
@@ -342,7 +341,7 @@ table.sprites{
         left: 2px;
         bottom: 2px;
         width: 100%;
-        background: green;
+        background: #008000;
         transform: skew(345deg);
         z-index: -1;
       }
@@ -359,7 +358,7 @@ table.sprites{
       left: 2px;
       bottom: 2px;
       width: 50%;
-      background: lightblue;
+      background: #add8e6;
       transform: skew(345deg);
       z-index: -1;
     }
@@ -370,7 +369,7 @@ table.sprites{
       right: 2px;
       bottom: 2px;
       width: 50%;
-      background: pink;
+      background: #ffc0cb;
       transform: skew(345deg);
       z-index: -1;
     }
@@ -386,7 +385,7 @@ table.sprites{
         right: 2px;
         bottom: 2px;
         width: 100%;
-        background: palegoldenrod;
+        background: #eee8aa;
         transform: skew(345deg);
         z-index: -1;
       }
@@ -402,7 +401,7 @@ table.sprites{
         left: 2px;
         bottom: 2px;
         width: 50%;
-        background: gold;
+        background: #ffd900;
         transform: skew(345deg);
         z-index: -1;
       }
@@ -413,7 +412,7 @@ table.sprites{
         right: 2px;
         bottom: 2px;
         width: 50%;
-        background: silver;
+        background: #c0c0c0;
         transform: skew(345deg);
         z-index: -1;
       }
@@ -430,7 +429,7 @@ table.sprites{
       left: 2px;
       bottom: 2px;
       width: 50%;
-      background: black;
+      background: #000000;
       transform: skew(345deg);
       z-index: -1;
     }
@@ -441,7 +440,7 @@ table.sprites{
       right: 2px;
       bottom: 2px;
       width: 50%;
-      background: white;
+      background: #ffffff;
       transform: skew(345deg);
       z-index: -1;
     }
@@ -457,7 +456,7 @@ table.sprites{
       left: 2px;
       bottom: 2px;
       width: 50%;
-      background: darkblue;
+      background: #00008b;
       transform: skew(345deg);
       z-index: -1;
     }
@@ -468,7 +467,7 @@ table.sprites{
       right: 2px;
       bottom: 2px;
       width: 50%;
-      background: darkred;
+      background: #8b0000;
       transform: skew(345deg);
       z-index: -1;
     }
@@ -483,7 +482,7 @@ table.sprites{
         left: 2px;
         bottom: 2px;
         width: 50%;
-        background: red;
+        background: #ff0000;
         transform: skew(345deg);
         z-index: -1;
       }
@@ -494,7 +493,7 @@ table.sprites{
         right: 2px;
         bottom: 2px;
         width: 50%;
-        background: blue;
+        background: #0000ff;
         transform: skew(345deg);
         z-index: -1;
       }
@@ -511,7 +510,7 @@ table.sprites{
       left: 2px;
       bottom: 2px;
       width: 50%;
-      background: darkgoldenrod;
+      background: #ffa600;
       transform: skew(345deg);
       z-index: -1;
     }
@@ -522,7 +521,7 @@ table.sprites{
       right: 2px;
       bottom: 2px;
       width: 50%;
-      background: darkblue;
+      background: #00008b;
       transform: skew(345deg);
       z-index: -1;
     }
@@ -538,7 +537,7 @@ table.sprites{
       left: 2px;
       bottom: 2px;
       width: 50%;
-      background: crimson;
+      background: #dc143c;
       transform: skew(345deg);
       z-index: -1;
     }
@@ -549,7 +548,7 @@ table.sprites{
       right: 2px;
       bottom: 2px;
       width: 50%;
-      background: cornflowerblue;
+      background: #6494ed;
       transform: skew(345deg);
       z-index: -1;
     }
