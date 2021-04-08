@@ -28,4 +28,7 @@ export class PokedexService {
     return this.http.get(`${this.url}/${id}`) as Observable<any>;
   }
 
+  public getVersions() : Observable<any>{
+    return this.http.get('https://pokeapi.co/api/v2/version-group/') as Observable<any>
+  }
 }

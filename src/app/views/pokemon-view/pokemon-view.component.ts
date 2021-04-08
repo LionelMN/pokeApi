@@ -18,10 +18,13 @@ export class PokemonViewComponent implements OnInit {
   private urlId : string;
   public pokemon : PokemonI;
   public isContentLoaded : boolean = false;
+  public versions : {name : string, url : string}[] = []
+
 
   ngOnInit(): void {
     this.urlId = this.route.snapshot.paramMap.get('id')
     this.getPokemon(this.urlId)
+    this.getVersions()
   }
 
   getPokemon(id){
@@ -32,11 +35,9 @@ export class PokemonViewComponent implements OnInit {
     })
   }
 
-/*   ngDoCheck() : void {
-    if(parseInt(this.urlId) !== this.pokemon.id){
-      this.getPokemon(this.urlId);
-      this.isContentLoaded = false;
-    }
-  } */
-
+  getVersions(){
+    this.pokedexService.getVersions().subscribe (versions => {
+      this.versions = versions.results
+    })
+  }
 }
