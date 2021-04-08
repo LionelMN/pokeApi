@@ -185,5 +185,17 @@ export interface PokemonI {
             "url" : string
         }
     }[],
-    "weight" : number
+    "weight" : number,
+    "moves" : { move : Move, version_group_details : Version_group_details}[]
 };
+
+interface Move {
+  name : string,
+  url : string,
+}
+
+interface Version_group_details {
+  "level_learned_at" : number,
+  "move_learn_method" : { "name" : string, "url" : string},
+  "version_group" : { "name" : string, "url" : string}
+}[]

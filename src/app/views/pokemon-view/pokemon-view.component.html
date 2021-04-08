@@ -1,10 +1,10 @@
-<a routerLink="/">Atrás</a>
+<a routerLink="/">Go to list</a>
 <app-spinner *ngIf="!isContentLoaded"></app-spinner>
 <div class="pokemon-container" *ngIf="isContentLoaded">
   <div class="nameBar">
-    <span routerLink="/pokemon/{{pokemon.id - 1}}" (click)="getPokemon(pokemon.id - 1)">Anterior</span>
-    <span>{{pokemon.name}}</span>
-    <span routerLink="/pokemon/{{pokemon.id + 1}}" (click)="getPokemon(pokemon.id + 1)">Siguiente</span>
+    <span routerLink="/pokemon/{{pokemon.id - 1}}" (click)="getPokemon(pokemon.id - 1)">Previous</span>
+    <span>#{{pokemon.id}} {{pokemon.name}}</span>
+    <span routerLink="/pokemon/{{pokemon.id + 1}}" (click)="getPokemon(pokemon.id + 1)">Next</span>
   </div>
   <div class="pokemonData">
     <img [src]="pokemon.sprites.other['official-artwork'].front_default" alt="" />
@@ -12,20 +12,60 @@
       <div class="types">
         <div *ngFor="let type of pokemon.types" class="type {{type.type.name}}">{{type.type.name}}</div>
       </div>
-      Abilities:
-      <div *ngFor="let ability of pokemon.abilities">{{ability.ability.name}} {{ability.is_hidden}}</div>
-        <table class="stats">
-          <tr><th colspan="2">Base stats</th></tr>
-          <tr *ngFor = "let stats of pokemon.stats">
-            <td>{{stats.stat.name}}</td>
-            <td>{{stats.base_stat}}</td>
-          </tr>
-        </table>
+      <table class="otherData">
+        <tr><th colspan="2">Other Data</th></tr>
+        <tr>
+          <td>Height</td>
+          <td>{{pokemon.height / 10}}m</td>
+        </tr>
+        <tr>
+          <td>Weight</td>
+          <td>{{pokemon.weight / 10}}kg</td>
+        </tr>
+      </table>
+      <table class="abilities">
+        <tr><th colspan="2">Abilities</th></tr>
+        <tr *ngFor = "let ability of pokemon.abilities">
+          <td>{{ability.ability.name}}</td>
+          <td *ngIf="!ability.is_hidden; else elseBlock">Ability number {{ability.slot}}</td>
+          <ng-template #elseBlock><td>Hidden ability</td></ng-template>
+        </tr>
+      </table>
+      <table class="stats">
+        <tr><th colspan="2">Base stats</th></tr>
+        <tr *ngFor = "let stats of pokemon.stats">
+          <td>{{stats.stat.name}}</td>
+          <td>{{stats.base_stat}}</td>
+        </tr>
+      </table>
     </div>
   </div>
 <!--   <img [src]="pokemon.sprites.versions['generation-vii']['icons'].front_default" alt="" />
   <img [src]="pokemon.sprites.versions['generation-viii']['icons'].front_default" alt="" /> -->
   <!-- <img [src]="pokemon.sprites.other.dream_world.front_default" alt=""> -->
+  <div style="color: white;">
+    moves
+    {{pokemon.moves[0].move.name}}
+    {{pokemon.moves[0].version_group_details[0].level_learned_at}}
+    {{pokemon.moves[0].version_group_details[0].move_learn_method.name}}
+    {{pokemon.moves[0].version_group_details[0].version_group.name}}
+  </div>
+<!--   <table class="moves">
+    <tr><th colspan="4">Moves on Red and Blue</th></tr>
+    <tr>
+      <td></td>
+      <td>Move Name</td>
+      <td>Level learned at</td>
+      <td>Learn method name</td>
+    </tr>
+    <tr *ngFor="let move of pokemon.moves; index as i">
+      <td>{{i + 1}}</td>
+      <td>{{move.move.name}}</td>
+      <td>{{move.version_group_details[0].level_learned_at}}</td>
+      <td>{{move.version_group_details[0].move_learn_method.name}}</td>
+    </tr>
+  </table> -->
+
   <table class="sprites">
     <tr><th colspan="8"><h2>Sprites</h2></th></tr>
     <div class="genOne" *ngIf="pokemon.sprites.versions['generation-i']['red-blue'].front_default">
