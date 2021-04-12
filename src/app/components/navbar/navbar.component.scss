@@ -3,17 +3,21 @@
     height: 1.5rem;
     background: var(--primary-bgColor);
     display: grid;
-    grid-template-columns: 9% 71% 19%;
+    grid-template-columns: 7% 70% 22%;
     gap: 0.5%;
     padding: 1rem;
     color: white;
     transition: 1s;
+    .logo-container{
+      outline: none;
+    }
     .filterByGeneration{
         text-align: center;
         overflow: hidden;
         ul {
             list-style: none;
             display: flex;
+            justify-content: space-around;
             margin-top: 1rem;
         }
         .generation{
@@ -24,17 +28,8 @@
             font-weight: 600;
         }
     }
-    .searchbar{
-        input{
-            outline: none;
-            border: none;
-            border-radius: 5px;
-            padding: 0.2rem 0 0.2rem 0.3rem;
-            transition: 1s;
-        }
-        input:focus {
-            box-shadow: inset 0px 0px 5px 2px blue;
-        }
+    app-searchbar{
+      z-index: 50;
     }
 }
 .displayedList{

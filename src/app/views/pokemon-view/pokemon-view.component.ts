@@ -31,7 +31,6 @@ export class PokemonViewComponent implements OnInit {
     this.pokedexService.getSinglePokemonById(id).subscribe( pokemon => {
       this.pokemon = pokemon;
       this.isContentLoaded = true;
-      console.log(this.pokemon)
     })
   }
 

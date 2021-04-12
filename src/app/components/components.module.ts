@@ -3,14 +3,17 @@ import { CommonModule } from '@angular/common';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SpinnerComponent } from './spinner/spinner.component';
 import { AppRoutingModule } from '../app-routing.module';
+import { FormsModule } from '@angular/forms';
+import { SearchbarComponent } from './searchbar/searchbar.component';
 
 
 
 @NgModule({
-  declarations: [NavbarComponent, SpinnerComponent],
+  declarations: [NavbarComponent, SpinnerComponent, SearchbarComponent],
   imports: [
     CommonModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   exports: [
     NavbarComponent,

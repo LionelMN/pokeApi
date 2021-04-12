@@ -1,5 +1,5 @@
 <div class="navbar-container" [ngClass]="{displayedList : isHovered}">
-    <div class="logo-container">
+    <div class="logo-container" routerLink="/">
         <img src="#" alt="Pokéball" class="logo">
     </div>
     <div class="filterByGeneration" (mouseenter)="onHover()" (mouseleave)="onHover()">
@@ -15,7 +15,5 @@
             <li class="generation" [hidden]="isHovered === false" routerLink="/" (click)="sendGeneration('?offset=809&limit=89')">Eigth generation</li>
         </ul>
     </div>
-    <div class="searchbar">
-        <input type="text" placeholder="Search a Pokémon" />
-    </div>
+    <app-searchbar></app-searchbar>
 </div>
