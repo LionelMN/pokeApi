@@ -18,7 +18,7 @@ export class PokedexListComponent implements OnInit {
   public img : string;
 
   public getPokedexByGen(){
-    this.pokedexService.getAllPokemon().subscribe(pokedex => {
+    this.pokedexService.getAllPokemonOfGen().subscribe(pokedex => {
       this.currentPokedex = pokedex.results;
       for (let i = 0; i < this.currentPokedex.length; i++) {
         this.pokedexService.getSinglePokemon(pokedex.results[i].url).subscribe(pokemon => {

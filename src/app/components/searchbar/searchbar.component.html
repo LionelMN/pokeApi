@@ -1,0 +1,23 @@
+<div class="searchbar">
+  <form action="" (submit)="reloadPage(search)">
+    <input
+      type="text"
+      name="search"
+      placeholder="Search a Pokémon"
+      autocomplete="off"
+      [(ngModel)]="search"
+      (focus)="onActivateSearch()"
+      (focusout)="onDeactivateSearch()"
+      (ngModelChange)="filterItems(search)"
+    />
+    <button type="submit" class="searchButton"> Search </button>
+  </form>
+</div>
+
+<div class="predictiveSearch" *ngIf="isSearchActive">
+  <div class="predictive-options" *ngIf="searchCategory === 'pokemon'">
+    <span *ngFor="let pokemon of filteredPokemons" (click)="selectSuggestion(pokemon.name)" (click)="reloadPage(search)">
+      {{pokemon.name}}
+    </span>
+  </div>
+</div>

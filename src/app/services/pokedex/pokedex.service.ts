@@ -16,8 +16,12 @@ export class PokedexService {
 
   constructor(private http : HttpClient) { }
 
-  public getAllPokemon() : Observable<any>{
+  public getAllPokemonOfGen() : Observable<any>{
     return this.http.get(`${this.url}${this.selectedGeneration}`) as Observable<any>;
+  }
+
+  public getAllPokemon() : Observable<any>{
+    return this.http.get(`${this.url}?offset=0&limit=898`) as Observable<any>;
   }
 
   public getSinglePokemon(singlePokemonUrl) : Observable<any>{
