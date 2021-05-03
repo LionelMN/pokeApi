@@ -2,26 +2,26 @@
     <div class="logo-container" routerLink="/">
         <img src="#" alt="Pokéball" class="logo">
     </div>
-    <div class="list filterByGeneration" (mouseenter)="onHover()" (mouseleave)="onHover()">
+    <div class="list filterByGeneration">
         <p>Pokemon</p>
-        <ul>
-            <li class="list_item generation" [hidden]="isHovered === false" routerLink="/pokemon" (click)="sendGeneration('?offset=0&limit=151')">First generation</li>
-            <li class="list_item generation" [hidden]="isHovered === false" routerLink="/pokemon" (click)="sendGeneration('?offset=151&limit=100')">Second generation</li>
-            <li class="list_item generation" [hidden]="isHovered === false" routerLink="/pokemon" (click)="sendGeneration('?offset=251&limit=135')">Third generation</li>
-            <li class="list_item generation" [hidden]="isHovered === false" routerLink="/pokemon" (click)="sendGeneration('?offset=386&limit=107')">Forth generation</li>
-            <li class="list_item generation" [hidden]="isHovered === false" routerLink="/pokemon" (click)="sendGeneration('?offset=493&limit=156')">Fith generation</li>
-            <li class="list_item generation" [hidden]="isHovered === false" routerLink="/pokemon" (click)="sendGeneration('?offset=649&limit=72')">Sixth generation</li>
-            <li class="list_item generation" [hidden]="isHovered === false" routerLink="/pokemon" (click)="sendGeneration('?offset=721&limit=88')">Seventh generation</li>
-            <li class="list_item generation" [hidden]="isHovered === false" routerLink="/pokemon" (click)="sendGeneration('?offset=809&limit=89')">Eigth generation</li>
+        <ul class="hidden">
+            <li class="list_item generation" routerLink="/pokemon" (click)="sendGeneration('?offset=0&limit=151')">First generation</li>
+            <li class="list_item generation" routerLink="/pokemon" (click)="sendGeneration('?offset=151&limit=100')">Second generation</li>
+            <li class="list_item generation" routerLink="/pokemon" (click)="sendGeneration('?offset=251&limit=135')">Third generation</li>
+            <li class="list_item generation" routerLink="/pokemon" (click)="sendGeneration('?offset=386&limit=107')">Forth generation</li>
+            <li class="list_item generation" routerLink="/pokemon" (click)="sendGeneration('?offset=493&limit=156')">Fith generation</li>
+            <li class="list_item generation" routerLink="/pokemon" (click)="sendGeneration('?offset=649&limit=72')">Sixth generation</li>
+            <li class="list_item generation" routerLink="/pokemon" (click)="sendGeneration('?offset=721&limit=88')">Seventh generation</li>
+            <li class="list_item generation" routerLink="/pokemon" (click)="sendGeneration('?offset=809&limit=89')">Eigth generation</li>
         </ul>
     </div>
-    <div class="list filterByItemClass" (mouseenter)="onHover()" (mouseleave)="onHover()">
+    <div class="list filterByItemClass">
         <p>Items</p>
-        <ul>
-            <li class="list_item itemClass" [hidden]="isHovered === false" routerLink="/items" [queryParams]="{category: 'pokeballs' }">Pokebals</li>
-            <li class="list_item itemClass" [hidden]="isHovered === false" routerLink="/items" [queryParams]="{category: 'medicines' }">Medicines</li>
-            <li class="list_item itemClass" [hidden]="isHovered === false" routerLink="/items">Berries</li>
-            <li class="list_item itemClass" [hidden]="isHovered === false" routerLink="/items" [queryParams]="{category: 'keyItems' }">Key items</li>
+        <ul class="hidden">
+            <li class="list_item itemClass" routerLink="/items" [queryParams]="{category: 'pokeballs' }">Pokebals</li>
+            <li class="list_item itemClass" routerLink="/items" [queryParams]="{category: 'medicines' }">Medicines</li>
+            <li class="list_item itemClass" routerLink="/items">Berries</li>
+            <li class="list_item itemClass" routerLink="/items" [queryParams]="{category: 'keyItems' }">Key items</li>
         </ul>
     </div>
     <app-searchbar></app-searchbar>

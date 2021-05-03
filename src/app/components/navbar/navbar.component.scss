@@ -2,8 +2,8 @@
     font-family: 'Karla', sans-serif;
     height: 1.5rem;
     background: var(--primary-bgColor);
-    display: grid;
-    grid-template-columns: 7% 35% 35% 22%;
+    display: flex;
+    justify-content: space-between;
     gap: 0.5%;
     padding: 1rem;
     color: white;
@@ -27,11 +27,24 @@
         .list_item:hover{
             font-weight: 600;
         }
+        .hidden{
+            display: none;
+        }
     }
     app-searchbar{
       z-index: 50;
     }
-}
-.displayedList{
-    height: 5rem;
+    &:hover{
+        height: 5rem;
+        .filterByGeneration:hover{
+            .hidden{
+                display: flex;
+            }
+        }
+        .filterByItemClass:hover{
+            .hidden{
+                display: flex;
+            }
+        }
+    }
 }
