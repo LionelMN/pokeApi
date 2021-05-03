@@ -1,0 +1,19 @@
+<div class="view-container">
+  <app-spinner *ngIf="!isContenLoaded"></app-spinner>
+
+  <div *ngIf="isContenLoaded">
+    <div *ngIf="category === 'pokeballs'"  class="itemList">
+      <div *ngFor="let pokeball of pokeballs" class="item-container" routerLink="/item/{{pokeball.id}}" routerLinkActive="active">
+        <img [src]="pokeball.sprites" [alt]="pokeball.name">
+        <p>{{pokeball.name}}</p>
+      </div>
+    </div>
+    <div *ngIf="category === 'medicines'"  class="itemList">
+      <div *ngFor="let medicine of medicines" class="item-container" routerLink="/item/{{medicine.id}}" routerLinkActive="active">
+        <img [src]="medicine.sprites" [alt]="medicine.name">
+        <p>{{medicine.name}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+

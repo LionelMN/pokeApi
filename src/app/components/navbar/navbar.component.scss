@@ -3,7 +3,7 @@
     height: 1.5rem;
     background: var(--primary-bgColor);
     display: grid;
-    grid-template-columns: 7% 70% 22%;
+    grid-template-columns: 7% 35% 35% 22%;
     gap: 0.5%;
     padding: 1rem;
     color: white;
@@ -11,20 +11,20 @@
     .logo-container{
       outline: none;
     }
-    .filterByGeneration{
+    .list{
         text-align: center;
-        overflow: hidden;
         ul {
             list-style: none;
             display: flex;
             justify-content: space-around;
             margin-top: 1rem;
         }
-        .generation{
+        .list_item{
             cursor: pointer;
             margin-right: 0.5rem;
+            outline: none;
         }
-        .generation:hover{
+        .list_item:hover{
             font-weight: 600;
         }
     }
