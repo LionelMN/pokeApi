@@ -8,7 +8,7 @@ const routes: Routes = [
   {path: "", pathMatch: "full", redirectTo: 'pokemon'},
   {path: 'pokemon', component: PokedexListComponent},
   {path: 'pokemon/:id', component: PokemonViewComponent},
-  {path: 'items/:category', component: ItemListComponent},
+  {path: 'items', component: ItemListComponent},
 ];
 
 @NgModule({

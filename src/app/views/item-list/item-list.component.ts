@@ -22,13 +22,13 @@ export class ItemListComponent implements OnInit {
   public category : string;
 
   ngOnInit(): void {
-    this.category = this.route.snapshot.paramMap.get('category');
+    this.category = this.route.snapshot.queryParamMap.get('category');
     this.getAllItems()
   }
 
   ngDoCheck() : void {
-    if(this.category !== this.route.snapshot.paramMap.get('category')){
-      this.category = this.route.snapshot.paramMap.get('category');
+    if(this.category !== this.route.snapshot.queryParamMap.get('category')){
+      this.category = this.route.snapshot.queryParamMap.get('category');
     }
   }
 

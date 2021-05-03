@@ -18,10 +18,10 @@
     <div class="list filterByItemClass" (mouseenter)="onHover()" (mouseleave)="onHover()">
         <p>Items</p>
         <ul>
-            <li class="list_item itemClass" [hidden]="isHovered === false" routerLink="/items/pokeballs" (click)="sendGeneration('?offset=0&limit=151')">Pokebals</li>
-            <li class="list_item itemClass" [hidden]="isHovered === false" routerLink="/items/medicines" (click)="sendGeneration('?offset=151&limit=100')">Medicines</li>
-            <li class="list_item itemClass" [hidden]="isHovered === false" routerLink="/items" (click)="sendGeneration('?offset=251&limit=135')">Berries</li>
-            <li class="list_item itemClass" [hidden]="isHovered === false" routerLink="/items/keyItems" (click)="sendGeneration('?offset=386&limit=107')">Key items</li>
+            <li class="list_item itemClass" [hidden]="isHovered === false" routerLink="/items" [queryParams]="{category: 'pokeballs' }">Pokebals</li>
+            <li class="list_item itemClass" [hidden]="isHovered === false" routerLink="/items" [queryParams]="{category: 'medicines' }">Medicines</li>
+            <li class="list_item itemClass" [hidden]="isHovered === false" routerLink="/items">Berries</li>
+            <li class="list_item itemClass" [hidden]="isHovered === false" routerLink="/items" [queryParams]="{category: 'keyItems' }">Key items</li>
         </ul>
     </div>
     <app-searchbar></app-searchbar>
