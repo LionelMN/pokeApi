@@ -1,18 +1,49 @@
 .navbar-container{
     font-family: 'Karla', sans-serif;
-    height: 1.5rem;
     background: var(--primary-bgColor);
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     gap: 0.5%;
     padding: 1rem;
     color: white;
-    transition: 1s;
+    height: 4rem;
     .logo-container{
       outline: none;
+      div{
+        position: relative;
+        width: 50px;
+        height: 50px;
+        border-radius: 100%;
+        border: 5px solid;
+        animation: rotation linear infinite 3s;
+        cursor: pointer;
+        &::after,&::before{
+          position: absolute;
+          content: '';
+        };
+        &::before{
+          top: 20%;
+          left: 20%;
+          height: 25px;
+          width: 25px;
+          border: 2px solid;
+          border-radius: 100%;
+          background: var(--primary-bgColor);
+          z-index: 1;
+        };
+        &::after{
+          top: 45%;
+          left: 0;
+          height: 2px;
+          width: 100%;
+          background: white;
+        }
+      }
     }
     .list{
+        transition: 1s;
         text-align: center;
+        margin: 0 auto;
         ul {
             list-style: none;
             display: flex;
@@ -27,24 +58,19 @@
         .list_item:hover{
             font-weight: 600;
         }
-        .hidden{
-            display: none;
-        }
     }
     app-searchbar{
       z-index: 50;
+      width: 200px;
+      margin: 0 auto;
     }
-    &:hover{
-        height: 5rem;
-        .filterByGeneration:hover{
-            .hidden{
-                display: flex;
-            }
-        }
-        .filterByItemClass:hover{
-            .hidden{
-                display: flex;
-            }
-        }
-    }
+}
+
+@keyframes rotation {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
 }

@@ -4,13 +4,14 @@
     background: black;
     .pokedexList{
         padding: 1rem;
-        display: grid;
-        grid-template-columns: repeat(5, 20%);
-        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
         text-align: center;
         .pokemon-container{
           color: white;
           position: relative;
+          width: 13%;
           margin: 0.5rem 1.5rem;
           transition: 2s ease-in-out;
           border: 1px solid var(--forth-bgColor);
