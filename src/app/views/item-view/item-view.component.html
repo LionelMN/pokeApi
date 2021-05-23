@@ -1,0 +1,36 @@
+<app-spinner *ngIf="!isContentLoaded"></app-spinner>
+<div class="container" *ngIf="isContentLoaded">
+  <div class="nameBar">
+    <span routerLink="/item/{{item.id - 1}}" (click)="getItem(item.id-1)">Previous</span>
+    <span>#{{item.name}}</span>
+    <span *ngIf="item.id < 954" routerLink="/item/{{item.id + 1}}" (click)="getItem(item.id+1)">Next</span>
+  </div>
+  <div class="itemData">
+    <img [src]="item.sprites.default" [alt]="item.name">
+    <div class="data">
+      <table>
+        <tr><th colspan="2">Data</th></tr>
+        <tr>
+          <td>Category</td>
+          <td>{{item.category.name}}</td>
+        </tr>
+        <tr>
+          <td>Effect</td>
+          <td>{{item.effect_entries[0].effect}}</td>
+        </tr>
+        <tr>
+          <td>Game Entries</td>
+          <td>{{item.flavor_text_entries[0].text}}</td>
+        </tr>
+        <tr>
+          <td [rowSpan]="item.attributes.length">
+            Attributes
+          </td>
+          <td>
+            <tr *ngFor="let attribute of item.attributes"><td>{{attribute.name}}</td></tr>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
