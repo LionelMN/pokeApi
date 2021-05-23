@@ -17,7 +17,8 @@ export class ItemsService {
     return this.http.get(`${this.url}?offset=0&limit=954`) as Observable<any>
   }
 
-  public getItem(url) : Observable<any>{
-    return this.http.get(url)
+  public getItem(id) : Observable<any>{
+    console.log(id)
+    return this.http.get(`${id}`) as Observable<any>
   }
 }

@@ -1,0 +1,100 @@
+.container{
+  padding: 1rem;
+  .nameBar{
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Karla';
+    border: 1px solid white;
+    border-radius: 50px;
+    margin: 0 1rem;
+    padding: 0.5rem;
+    span{
+      text-transform: capitalize;
+      outline: none;
+      &:nth-child(1), &:nth-child(3){
+        cursor: pointer;
+        color: var(--terciary-bgColor);
+      }
+      &:nth-child(2){
+        font-size: 1.5rem;
+        letter-spacing: .5rem;
+        font-weight: 600;
+      }
+    }
+  }
+  .itemData{
+    position: relative;
+    display: grid;
+    grid-template-columns: 32% 68%;
+    margin-top: 1rem;
+    padding: 1rem 0.5rem;
+    color: #ffffff;
+    z-index: 1;
+    background: var(--forth-bgColor);
+    &::before{
+      position: absolute;
+      content: "";
+      top: -3px;
+      bottom: -3px;
+      left: -45px;
+      width: 35rem;
+      background: var(--secondary-bgColor);
+      z-index: -1;
+      transform: skew(350deg);
+      box-shadow: 6px 0 10px 1px #000000;
+    }
+    img {
+      width: 15rem;
+      background: #ffffff;
+      border-radius: 50%;
+      box-shadow: 0 6px 10px 1px #000000;
+    }
+    .data{
+      margin: 0 auto;
+      table{
+        color: black;
+        border: 1px solid var(--terciary-bgColor);
+        border-radius: 5px;
+        text-transform: capitalize;
+        vertical-align: middle;
+        margin: 0.5rem;
+        background: rgba(255, 255, 255, 0.4);
+        grid-row: 2 / 3;
+        box-shadow: 0 1px 10px 1px #000000;
+        tr {
+          th {
+            font-family: 'Karla';
+            padding: 0.2rem;
+            border-bottom: 1px solid var(--terciary-bgColor);
+            font-weight: 900;
+          }
+          td {
+            font-family: 'Spectral';
+            text-align: center;
+            margin: 0;
+            padding: 0.2rem;
+            border-bottom: 2px solid var(--terciary-bgColor);
+            &:nth-child(1){
+              border-right: 2px solid var(--terciary-bgColor);
+            }
+            tr{
+              td{
+                width: 55rem;
+                border: none;
+              }
+            }
+          }
+          &:last-child{
+            td{
+              border-bottom: none;
+            }
+          }
+        }
+      }
+    }
+    }
+
+
+}
