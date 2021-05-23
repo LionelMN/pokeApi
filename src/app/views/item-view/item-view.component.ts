@@ -25,7 +25,7 @@ export class ItemViewComponent implements OnInit {
   }
 
   getItem(id){
-    this.itemsService.getItem(id).subscribe( item => {
+    this.itemsService.getItem(`https://pokeapi.co/api/v2/item/${id}`).subscribe( item => {
       this.item = item;
       this.isContentLoaded = true;
     })
