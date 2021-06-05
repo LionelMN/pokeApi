@@ -1,9 +1,9 @@
 <app-spinner *ngIf="!isContentLoaded"></app-spinner>
 <div class="pokemon-container" *ngIf="isContentLoaded">
   <div class="nameBar">
-    <span routerLink="/pokemon/{{pokemon.id - 1}}" (click)="getPokemon(pokemon.id - 1)">Previous</span>
-    <span>#{{pokemon.id}} {{pokemon.name}}</span>
-    <span routerLink="/pokemon/{{pokemon.id + 1}}" (click)="getPokemon(pokemon.id + 1)">Next</span>
+    <span routerLink="/pokemon/{{pokemon.id - 1}}" *ngIf="pokemon.id > 1" (click)="getPokemon(pokemon.id - 1)" class="navigation">Previous</span>
+    <span class="pokemonName">#{{pokemon.id}} {{pokemon.name}}</span>
+    <span routerLink="/pokemon/{{pokemon.id + 1}}" *ngIf="pokemon.id < 898" (click)="getPokemon(pokemon.id + 1)" class="navigation">Next</span>
   </div>
   <div class="pokemonData">
     <img [src]="pokemon.sprites.other['official-artwork'].front_default" alt="" />
@@ -42,13 +42,13 @@
 <!--   <img [src]="pokemon.sprites.versions['generation-vii']['icons'].front_default" alt="" />
   <img [src]="pokemon.sprites.versions['generation-viii']['icons'].front_default" alt="" /> -->
   <!-- <img [src]="pokemon.sprites.other.dream_world.front_default" alt=""> -->
-  <div style="color: white;">
+<!--   <div style="color: white;">
     moves
     {{pokemon.moves[0].move.name}}
     {{pokemon.moves[0].version_group_details[0].level_learned_at}}
     {{pokemon.moves[0].version_group_details[0].move_learn_method.name}}
     {{pokemon.moves[0].version_group_details[0].version_group.name}}
-  </div>
+  </div> -->
 <!--   <table class="moves">
     <tr><th colspan="4">Moves on Red and Blue</th></tr>
     <tr>

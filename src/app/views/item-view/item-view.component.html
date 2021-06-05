@@ -1,9 +1,9 @@
 <app-spinner *ngIf="!isContentLoaded"></app-spinner>
 <div class="container" *ngIf="isContentLoaded">
   <div class="nameBar">
-    <span routerLink="/item/{{item.id - 1}}" (click)="getItem(item.id-1)">Previous</span>
-    <span>#{{item.name}}</span>
-    <span *ngIf="item.id < 954" routerLink="/item/{{item.id + 1}}" (click)="getItem(item.id+1)">Next</span>
+    <span routerLink="/item/{{item.id - 1}}" *ngIf="item.id > 1" (click)="getItem(item.id-1)" class="navigation">Previous</span>
+    <span class="itemName">{{item.name}}</span>
+    <span *ngIf="item.id < 954" routerLink="/item/{{item.id + 1}}" (click)="getItem(item.id+1)" class="navigation">Next</span>
   </div>
   <div class="itemData">
     <img [src]="item.sprites.default" [alt]="item.name">

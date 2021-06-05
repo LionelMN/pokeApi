@@ -18,7 +18,6 @@ export class ItemsService {
   }
 
   public getItem(id) : Observable<any>{
-    console.log(id)
     return this.http.get(`${id}`) as Observable<any>
   }
 }

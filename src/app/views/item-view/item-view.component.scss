@@ -8,16 +8,16 @@
     font-family: 'Karla';
     border: 1px solid white;
     border-radius: 50px;
-    margin: 0 1rem;
+    margin: 0.5rem 1rem;
     padding: 0.5rem;
     span{
       text-transform: capitalize;
       outline: none;
-      &:nth-child(1), &:nth-child(3){
+      &.navigation{
         cursor: pointer;
         color: var(--terciary-bgColor);
       }
-      &:nth-child(2){
+      &.itemName{
         font-size: 1.5rem;
         letter-spacing: .5rem;
         font-weight: 600;
@@ -96,5 +96,33 @@
     }
     }
 
+
+}
+
+@media only screen and (max-width: 480px) {
+  .container{
+    padding: 0;
+    .nameBar{
+      text-align: center;
+    }
+
+    .itemData{
+      display: block;
+      &::before{
+        transform: skew(0deg);
+        height: 12rem;
+        width: 100%;
+        left: 0;
+        box-shadow: 0px 0 10px 1px #000000;
+      }
+      img{
+        width: 10rem;
+        margin: 0 25vw;
+      }
+      .data{
+        margin-top: 1rem;
+      }
+    }
+  }
 
 }
