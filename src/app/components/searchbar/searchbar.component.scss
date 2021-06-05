@@ -39,3 +39,16 @@
     }
   }
 }
+
+@media only screen and (max-width: 480px){
+  .searchbar{
+    input{
+      width: 10rem;
+      border-radius: 5px;
+    }
+  }
+
+  .predictiveSearch{
+    max-height: 200px;
+  }
+}
