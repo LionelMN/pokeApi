@@ -218,50 +218,54 @@
         </tr>
       </div>
       <div class="platinum">
-        <tr><td colspan="8"><h5>Platinum</h5></td></tr>
-        <tr>
-          <td><img [src]="pokemon.sprites.versions['generation-iv']['platinum'].front_default" alt="" /></td>
-          <td><img [src]="pokemon.sprites.versions['generation-iv']['platinum'].back_default" alt="" /></td>
-          <td><img [src]="pokemon.sprites.versions['generation-iv']['platinum'].front_shiny" alt="" /></td>
-          <td><img [src]="pokemon.sprites.versions['generation-iv']['platinum'].back_shiny" alt="" /></td>
-          <td *ngIf="pokemon.sprites.versions['generation-iv']['diamond-pearl'].front_female"><img [src]="pokemon.sprites.versions['generation-iv']['platinum'].front_female" alt="" /></td>
-          <td *ngIf="pokemon.sprites.versions['generation-iv']['diamond-pearl'].front_female"><img [src]="pokemon.sprites.versions['generation-iv']['platinum'].back_female" alt="" /></td>
-          <td *ngIf="pokemon.sprites.versions['generation-iv']['diamond-pearl'].front_female"><img [src]="pokemon.sprites.versions['generation-iv']['platinum'].front_shiny_female" alt="" /></td>
-          <td *ngIf="pokemon.sprites.versions['generation-iv']['diamond-pearl'].front_female"><img [src]="pokemon.sprites.versions['generation-iv']['platinum'].back_shiny_female" alt="" /></td>
-        </tr>
-        <tr>
-          <td>Front default</td>
-          <td>Back default</td>
-          <td>Front shiny</td>
-          <td>Back shiny </td>
-          <td *ngIf="pokemon.sprites.versions['generation-iv']['diamond-pearl'].front_female">Front female</td>
-          <td *ngIf="pokemon.sprites.versions['generation-iv']['diamond-pearl'].front_female">Back female</td>
-          <td *ngIf="pokemon.sprites.versions['generation-iv']['diamond-pearl'].front_female">Front shiny female</td>
-          <td *ngIf="pokemon.sprites.versions['generation-iv']['diamond-pearl'].front_female">Back shiny female</td>
-        </tr>
+        <div>
+          <tr><td colspan="8"><h5>Platinum</h5></td></tr>
+          <tr>
+            <td><img [src]="pokemon.sprites.versions['generation-iv']['platinum'].front_default" alt="" /></td>
+            <td><img [src]="pokemon.sprites.versions['generation-iv']['platinum'].back_default" alt="" /></td>
+            <td><img [src]="pokemon.sprites.versions['generation-iv']['platinum'].front_shiny" alt="" /></td>
+            <td><img [src]="pokemon.sprites.versions['generation-iv']['platinum'].back_shiny" alt="" /></td>
+            <td *ngIf="pokemon.sprites.versions['generation-iv']['diamond-pearl'].front_female"><img [src]="pokemon.sprites.versions['generation-iv']['platinum'].front_female" alt="" /></td>
+            <td *ngIf="pokemon.sprites.versions['generation-iv']['diamond-pearl'].front_female"><img [src]="pokemon.sprites.versions['generation-iv']['platinum'].back_female" alt="" /></td>
+            <td *ngIf="pokemon.sprites.versions['generation-iv']['diamond-pearl'].front_female"><img [src]="pokemon.sprites.versions['generation-iv']['platinum'].front_shiny_female" alt="" /></td>
+            <td *ngIf="pokemon.sprites.versions['generation-iv']['diamond-pearl'].front_female"><img [src]="pokemon.sprites.versions['generation-iv']['platinum'].back_shiny_female" alt="" /></td>
+          </tr>
+          <tr>
+            <td>Front default</td>
+            <td>Back default</td>
+            <td>Front shiny</td>
+            <td>Back shiny </td>
+            <td *ngIf="pokemon.sprites.versions['generation-iv']['diamond-pearl'].front_female">Front female</td>
+            <td *ngIf="pokemon.sprites.versions['generation-iv']['diamond-pearl'].front_female">Back female</td>
+            <td *ngIf="pokemon.sprites.versions['generation-iv']['diamond-pearl'].front_female">Front shiny female</td>
+            <td *ngIf="pokemon.sprites.versions['generation-iv']['diamond-pearl'].front_female">Back shiny female</td>
+          </tr>
+        </div>
       </div>
       <div class="heartgoldSoulsilver">
-        <tr><td colspan="8"><h5>HeartGold and SoulSilver</h5></td></tr>
-        <tr>
-          <td><img [src]="pokemon.sprites.versions['generation-iv']['heartgold-soulsilver'].front_default" alt="" /></td>
-          <td><img [src]="pokemon.sprites.versions['generation-iv']['heartgold-soulsilver'].back_default" alt="" /></td>
-          <td><img [src]="pokemon.sprites.versions['generation-iv']['heartgold-soulsilver'].front_shiny" alt="" /></td>
-          <td><img [src]="pokemon.sprites.versions['generation-iv']['heartgold-soulsilver'].back_shiny" alt="" /></td>
-          <td *ngIf="pokemon.sprites.versions['generation-iv']['diamond-pearl'].front_female"><img [src]="pokemon.sprites.versions['generation-iv']['heartgold-soulsilver'].front_female" alt="" /></td>
-          <td *ngIf="pokemon.sprites.versions['generation-iv']['diamond-pearl'].front_female"><img [src]="pokemon.sprites.versions['generation-iv']['heartgold-soulsilver'].back_female" alt="" /></td>
-          <td *ngIf="pokemon.sprites.versions['generation-iv']['diamond-pearl'].front_female"><img [src]="pokemon.sprites.versions['generation-iv']['heartgold-soulsilver'].front_shiny_female" alt="" /></td>
-          <td *ngIf="pokemon.sprites.versions['generation-iv']['diamond-pearl'].front_female"><img [src]="pokemon.sprites.versions['generation-iv']['heartgold-soulsilver'].back_shiny_female" alt="" /></td>
-        </tr>
-        <tr>
-          <td>Front default</td>
-          <td>Back default</td>
-          <td>Front shiny</td>
-          <td>Back shiny </td>
-          <td *ngIf="pokemon.sprites.versions['generation-iv']['diamond-pearl'].front_female">Front female</td>
-          <td *ngIf="pokemon.sprites.versions['generation-iv']['diamond-pearl'].front_female">Back female</td>
-          <td *ngIf="pokemon.sprites.versions['generation-iv']['diamond-pearl'].front_female">Front shiny female</td>
-          <td *ngIf="pokemon.sprites.versions['generation-iv']['diamond-pearl'].front_female">Back shiny female</td>
-        </tr>
+        <div>
+          <tr><td colspan="8"><h5>HeartGold and SoulSilver</h5></td></tr>
+          <tr>
+            <td><img [src]="pokemon.sprites.versions['generation-iv']['heartgold-soulsilver'].front_default" alt="" /></td>
+            <td><img [src]="pokemon.sprites.versions['generation-iv']['heartgold-soulsilver'].back_default" alt="" /></td>
+            <td><img [src]="pokemon.sprites.versions['generation-iv']['heartgold-soulsilver'].front_shiny" alt="" /></td>
+            <td><img [src]="pokemon.sprites.versions['generation-iv']['heartgold-soulsilver'].back_shiny" alt="" /></td>
+            <td *ngIf="pokemon.sprites.versions['generation-iv']['diamond-pearl'].front_female"><img [src]="pokemon.sprites.versions['generation-iv']['heartgold-soulsilver'].front_female" alt="" /></td>
+            <td *ngIf="pokemon.sprites.versions['generation-iv']['diamond-pearl'].front_female"><img [src]="pokemon.sprites.versions['generation-iv']['heartgold-soulsilver'].back_female" alt="" /></td>
+            <td *ngIf="pokemon.sprites.versions['generation-iv']['diamond-pearl'].front_female"><img [src]="pokemon.sprites.versions['generation-iv']['heartgold-soulsilver'].front_shiny_female" alt="" /></td>
+            <td *ngIf="pokemon.sprites.versions['generation-iv']['diamond-pearl'].front_female"><img [src]="pokemon.sprites.versions['generation-iv']['heartgold-soulsilver'].back_shiny_female" alt="" /></td>
+          </tr>
+          <tr>
+            <td>Front default</td>
+            <td>Back default</td>
+            <td>Front shiny</td>
+            <td>Back shiny </td>
+            <td *ngIf="pokemon.sprites.versions['generation-iv']['diamond-pearl'].front_female">Front female</td>
+            <td *ngIf="pokemon.sprites.versions['generation-iv']['diamond-pearl'].front_female">Back female</td>
+            <td *ngIf="pokemon.sprites.versions['generation-iv']['diamond-pearl'].front_female">Front shiny female</td>
+            <td *ngIf="pokemon.sprites.versions['generation-iv']['diamond-pearl'].front_female">Back shiny female</td>
+          </tr>
+        </div>
       </div>
     </div>
     <div class="genFive" *ngIf="pokemon.sprites.versions['generation-v']['black-white'].front_default">

@@ -731,6 +731,12 @@ table.sprites{
       right: 0;
     }
 
+    .genTwo{
+      .crystal::after{
+        width: 98%;
+      }
+    }
+
     .genThree{
       .emerald::before{
         left: 0;
@@ -739,15 +745,14 @@ table.sprites{
 
     .genFour{
       .platinum::before{
-        width: 194%;
+        width: 99%;
       }
       .heartgoldSoulsilver{
         &::before{
-          width: 98%;
+          width: 50%;
         }
         &::after{
-          width: 97%;
-          right: -95%;
+          width: 50%;
         }
       }
     }
