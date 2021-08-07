@@ -47,7 +47,7 @@
       <div>Method</div>
       <div>Level</div>
     </div>
-    <div class="moveList__body" *ngFor="let move of pokemon.moves">
+    <div class="moveList__body" *ngFor="let move of moves  | paginate: config">
       <div class="move_name">{{move.move.name}}</div>
       <div>
         <div class="version_details" *ngFor="let version of move.version_group_details">
@@ -56,6 +56,9 @@
           <div>{{version.level_learned_at}}</div>
         </div>
       </div>
+    </div>
+    <div class="paginationControls">
+      <pagination-controls (pageChange)="pageChanged($event)"></pagination-controls>
     </div>
   </div>
 

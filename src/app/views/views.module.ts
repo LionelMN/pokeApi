@@ -7,6 +7,7 @@ import { PokemonViewComponent } from './pokemon-view/pokemon-view.component';
 import { AppRoutingModule } from '../app-routing.module';
 import { ItemListComponent } from './item-list/item-list.component';
 import { ItemViewComponent } from './item-view/item-view.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 
 
@@ -16,6 +17,7 @@ import { ItemViewComponent } from './item-view/item-view.component';
     CommonModule,
     ComponentsModule,
     AppRoutingModule,
+    NgxPaginationModule
   ],
   exports: [
     PokedexListComponent,
