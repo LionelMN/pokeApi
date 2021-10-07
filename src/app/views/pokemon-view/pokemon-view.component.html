@@ -40,6 +40,31 @@
     </div>
   </div>
 
+  <div class="evolutionChain">
+    {{pokemon.evolution_chain.chain.species.name}}
+    <div *ngFor="let stage of pokemon.evolution_chain.chain.evolves_to">
+      {{stage.species.name}}
+      <span *ngIf="stage.evolution_details[0].item">{{stage.evolution_details[0].item.name}}</span>
+      <span *ngIf="stage.evolution_details[0].gender">
+        <span *ngIf="stage.evolution_details[0].gender == 1">female</span>
+        <span *ngIf="stage.evolution_details[0].gender == 2">male</span>
+      </span>
+      <span *ngIf="stage.evolution_details[0].known_move">{{stage.evolution_details[0].known_move.name}}</span>
+
+      <div *ngIf="stage.evolves_to.length !== 0">
+        <div *ngFor="let stage2 of stage.evolves_to">
+          {{stage2.species.name}}
+          <span *ngIf="stage2.evolution_details[0].item">{{stage2.evolution_details[0].item.name}}</span>
+          <span *ngIf="stage2.evolution_details[0].gender">
+            <span *ngIf="stage2.evolution_details[0].gender == 1">female</span>
+            <span *ngIf="stage2.evolution_details[0].gender == 2">male</span>
+          </span>
+          <span *ngIf="stage2.evolution_details[0].known_move">{{stage2.evolution_details[0].known_move.name}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="moveList">
     <div class="moveList__header">
       <div>Move</div>

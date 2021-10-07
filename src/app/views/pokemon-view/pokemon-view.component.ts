@@ -44,13 +44,28 @@ export class PokemonViewComponent implements OnInit {
         currentPage: 1,
         totalItems: this.moves.length
       }
-      this.isContentLoaded = true;
+      this.getSpecies(id)
     })
   }
 
   getVersions(){
     this.pokedexService.getVersions().subscribe (versions => {
       this.versions = versions.results
+    })
+  }
+
+  getSpecies(id){
+    this.pokedexService.getSpecies(id).subscribe(specie => {
+      this.pokemon.species = specie;
+      this.getEvolutionChain(specie.evolution_chain.url)
+    })
+  }
+
+  getEvolutionChain(url) {
+    this.pokedexService.getEvolutionChain(url).subscribe(chain => {
+      this.pokemon.evolution_chain = chain;
+      this.isContentLoaded = true;
+      console.log(this.pokemon)
     })
   }
 }

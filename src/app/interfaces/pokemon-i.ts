@@ -186,7 +186,9 @@ export interface PokemonI {
         }
     }[],
     "weight" : number,
-    "moves" : { move : Move, version_group_details : Version_group_details}[]
+    "moves" : { move : Move, version_group_details : Version_group_details}[],
+    "species" : species,
+    "evolution_chain" : evolutionChain
 };
 
 interface Move {
@@ -199,3 +201,42 @@ interface Version_group_details {
   "move_learn_method" : { "name" : string, "url" : string},
   "version_group" : { "name" : string, "url" : string}
 }[]
+
+interface species{
+  evolution_chain: {
+    "url": string
+  },
+}
+
+interface evolutionChain {
+  chain : {
+    evolution_details : {
+      "gender" : string,
+      "held_item" : string,
+      "item": string,
+      "known_move": string,
+      "known_move_type": string,
+      "location": string,
+      "min_affection": Number,
+      "min_beauty": Number,
+      "min_happiness": Number,
+      "min_level": number,
+      "needs_overworld_rain": boolean,
+      "party_species": string,
+      "party_type": string,
+      "relative_physical_stats": number,
+      "time_of_day": string,
+      "trade_species": string,
+      "turn_upside_down": boolean,
+      "trigger": {
+        "name": string,
+        "url": string
+      },
+    }[],
+    species : {
+      "name" : string,
+      "url" : string
+    },
+    evolves_to : evolutionChain
+  }
+}
