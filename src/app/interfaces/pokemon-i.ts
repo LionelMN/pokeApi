@@ -237,6 +237,7 @@ interface evolutionChain {
       "name" : string,
       "url" : string
     },
-    evolves_to : evolutionChain
+    evolves_to : evolutionChain;
+    stage1Id : string;
   }
 }

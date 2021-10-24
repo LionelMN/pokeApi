@@ -242,6 +242,61 @@
     }
   }
 }
+
+.evolutionChain{
+  font-family: "Karla";
+  font-weight: 600;
+  border: 1px solid var(--terciary-bgColor);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.4);
+  margin: 1rem 0.5rem;
+  padding: 0.5rem;
+  display: grid;
+  align-items: center;
+  text-align: center;
+  text-transform: capitalize;
+  div#st{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .stage{
+    margin: .25rem;
+  }
+  .stagePictureContainer{
+    cursor: pointer;
+  }
+  img.evolutionIMG {
+    width: 200px;
+    display: block;
+    margin: auto;
+  }
+}
+
+.evolutionChain.oneStage{
+  display: block;
+}
+
+.evolutionChain.twoStages{
+  grid-template-columns: 50% 50%;
+}
+
+.evolutionChain.threeStages{
+  grid-template-columns: 30% 70%;
+}
+
+.movesTableController{
+  font-family: "Karla";
+  font-weight: 600;
+  text-transform: capitalize;
+  margin: 1rem 1rem -1rem;
+  background: rgba(255, 255, 255, 0.4);
+  text-align: center;
+  border: 1px solid var(--terciary-bgColor);
+  width: 10%;
+  cursor: pointer;
+}
+
 .moveList{
   font-family: "Karla";
   text-transform: capitalize;
@@ -281,7 +336,6 @@
   }
 }
 
-
 table.sprites{
   text-align: center;
   vertical-align: middle;
@@ -314,22 +368,22 @@ table.sprites{
       content: '';
       position: absolute;
       top: 2px;
-      left: 2px;
+      left: 0px;
       bottom: 2px;
       width: 50%;
       background: #ff0000;
-      transform: skew(345deg);
+
       z-index: -1;
     }
     &::after{
       content: '';
       position: absolute;
       top: 2px;
-      right: 2px;
+      right: 0px;
       bottom: 2px;
       width: 50%;
       background: #0000ff;
-      transform: skew(345deg);
+
       z-index: -1;
     }
     .yellow{
@@ -345,7 +399,7 @@ table.sprites{
         bottom: 2px;
         width: 100%;
         background: #ffff00;
-        transform: skew(345deg);
+
         z-index: -1;
       }
     }
@@ -362,7 +416,7 @@ table.sprites{
       bottom: 2px;
       width: 50%;
       background: #ffd900;
-      transform: skew(345deg);
+
       z-index: -1;
     }
     &::after{
@@ -373,7 +427,7 @@ table.sprites{
       bottom: 2px;
       width: 50%;
       background: #c0c0c0;
-      transform: skew(345deg);
+
       z-index: -1;
     }
     .gold{
@@ -388,7 +442,7 @@ table.sprites{
         bottom: 2px;
         width: 50%;
         background: #ffd900;
-        transform: skew(345deg);
+
         z-index: -1;
       }
     }
@@ -404,7 +458,7 @@ table.sprites{
         bottom: 2px;
         width: 50%;
         background: #c0c0c0;
-        transform: skew(345deg);
+
         z-index: -1;
       }
     }
@@ -421,7 +475,7 @@ table.sprites{
         bottom: 2px;
         width: 100%;
         background: #add8e6;
-        transform: skew(345deg);
+
         z-index: -1;
       }
     }
@@ -438,7 +492,7 @@ table.sprites{
       bottom: 2px;
       width: 50%;
       background: #dc143c;
-      transform: skew(345deg);
+
       z-index: -1;
     }
     &::after{
@@ -449,7 +503,7 @@ table.sprites{
       bottom: 2px;
       width: 50%;
       background: #0000ff;
-      transform: skew(345deg);
+
       z-index: -1;
     }
     .fireRedLeafGreen{
@@ -460,22 +514,22 @@ table.sprites{
         content: '';
         position: absolute;
         top: 2px;
-        left: 2px;
+        left: 0px;
         bottom: 2px;
-        width: 50.3%;
+        width: 50%;
         background: #ff0000;
-        transform: skew(345deg);
+
         z-index: -1;
       }
       &::after{
         content: '';
         position: absolute;
         top: 2px;
-        right: 2px;
+        right: 0px;
         bottom: 2px;
-        width: 50.3%;
+        width: 50%;
         background: #00b600;
-        transform: skew(345deg);
+
         z-index: -1;
       }
     }
@@ -487,11 +541,11 @@ table.sprites{
         content: '';
         position: absolute;
         top: 2px;
-        left: -35px;
+        left: 0px;
         bottom: 2px;
         width: 100%;
         background: #008000;
-        transform: skew(345deg);
+
         z-index: -1;
       }
     }
@@ -508,7 +562,7 @@ table.sprites{
       bottom: 2px;
       width: 50%;
       background: #add8e6;
-      transform: skew(345deg);
+
       z-index: -1;
     }
     &::after{
@@ -519,7 +573,7 @@ table.sprites{
       bottom: 2px;
       width: 50%;
       background: #ffc0cb;
-      transform: skew(345deg);
+
       z-index: -1;
     }
     .platinum{
@@ -535,7 +589,7 @@ table.sprites{
         bottom: 2px;
         width: 100%;
         background: #eee8aa;
-        transform: skew(345deg);
+
         z-index: -1;
       }
     }
@@ -551,7 +605,7 @@ table.sprites{
         bottom: 2px;
         width: 50%;
         background: #ffd900;
-        transform: skew(345deg);
+
         z-index: -1;
       }
       &::after{
@@ -562,7 +616,7 @@ table.sprites{
         bottom: 2px;
         width: 50%;
         background: #c0c0c0;
-        transform: skew(345deg);
+
         z-index: -1;
       }
     }
@@ -579,7 +633,7 @@ table.sprites{
       bottom: 2px;
       width: 50%;
       background: #000000;
-      transform: skew(345deg);
+
       z-index: -1;
     }
     &::after{
@@ -590,7 +644,7 @@ table.sprites{
       bottom: 2px;
       width: 50%;
       background: #ffffff;
-      transform: skew(345deg);
+
       z-index: -1;
     }
   }
@@ -606,7 +660,7 @@ table.sprites{
       bottom: 2px;
       width: 50%;
       background: #00008b;
-      transform: skew(345deg);
+
       z-index: -1;
     }
     &::after{
@@ -617,7 +671,7 @@ table.sprites{
       bottom: 2px;
       width: 50%;
       background: #8b0000;
-      transform: skew(345deg);
+
       z-index: -1;
     }
     .omegaAlpha{
@@ -632,7 +686,7 @@ table.sprites{
         bottom: 2px;
         width: 50%;
         background: #ff0000;
-        transform: skew(345deg);
+
         z-index: -1;
       }
       &::after{
@@ -643,7 +697,7 @@ table.sprites{
         bottom: 2px;
         width: 50%;
         background: #0000ff;
-        transform: skew(345deg);
+
         z-index: -1;
       }
     }
@@ -660,7 +714,7 @@ table.sprites{
       bottom: 2px;
       width: 50%;
       background: #ffa600;
-      transform: skew(345deg);
+
       z-index: -1;
     }
     &::after{
@@ -671,7 +725,7 @@ table.sprites{
       bottom: 2px;
       width: 50%;
       background: #00008b;
-      transform: skew(345deg);
+
       z-index: -1;
     }
   }
@@ -687,7 +741,7 @@ table.sprites{
       bottom: 2px;
       width: 50%;
       background: #dc143c;
-      transform: skew(345deg);
+
       z-index: -1;
     }
     &::after{
@@ -698,7 +752,7 @@ table.sprites{
       bottom: 2px;
       width: 50%;
       background: #6494ed;
-      transform: skew(345deg);
+
       z-index: -1;
     }
   }
@@ -729,6 +783,12 @@ table.sprites{
       .otherData,.abilities,.stats{
         width: 100%;
       }
+    }
+  }
+
+  .evolutionChain{
+    img.evolutionIMG{
+      width: 50px;
     }
   }
 

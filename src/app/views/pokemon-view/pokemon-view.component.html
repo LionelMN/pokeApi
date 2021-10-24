@@ -40,32 +40,74 @@
     </div>
   </div>
 
-  <div class="evolutionChain">
-    {{pokemon.evolution_chain.chain.species.name}}
-    <div *ngFor="let stage of pokemon.evolution_chain.chain.evolves_to">
-      {{stage.species.name}}
-      <span *ngIf="stage.evolution_details[0].item">{{stage.evolution_details[0].item.name}}</span>
-      <span *ngIf="stage.evolution_details[0].gender">
-        <span *ngIf="stage.evolution_details[0].gender == 1">female</span>
-        <span *ngIf="stage.evolution_details[0].gender == 2">male</span>
-      </span>
-      <span *ngIf="stage.evolution_details[0].known_move">{{stage.evolution_details[0].known_move.name}}</span>
+  <div class="evolutionChain"
+    [ngClass]="{'oneStage': pokemon.evolution_chain.chain.evolves_to.length === 0,
+                'twoStages': pokemon.evolution_chain.chain.evolves_to.length > 0,
+                'threeStages': pokemon.evolution_chain.chain.evolves_to[0].evolves_to.length > 0}"
+  >
+    <div routerLink="/pokemon/{{pokemon.evolution_chain.chain.stage1Id}}" (click)="getPokemon(pokemon.evolution_chain.chain.stage1Id)" class="stagePictureContainer">
+      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/{{pokemon.evolution_chain.chain.stage1Id}}.png" alt="" class="evolutionIMG">
+      <span>{{pokemon.evolution_chain.chain.species.name}}</span>
+    </div>
+    <div class="secondStages" *ngIf="pokemon.evolution_chain.chain.evolves_to.length !== 0">
+      <div *ngFor="let stage2 of pokemon.evolution_chain.chain.evolves_to" id="st">
+        <div class="stage">
+          <div routerLink="/pokemon/{{stage2.stage2Id}}" (click)="getPokemon(stage2.stage2Id)" class="stagePictureContainer">
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/{{stage2.stage2Id}}.png" alt="" class="evolutionIMG">
+            {{stage2.species.name}}
+          </div>
+          <div class="evolutionConditions">
+            <div *ngFor="let version of stage2.evolution_details">
+              <span *ngIf="version.min_level">Level {{version.min_level}}</span>
+              <span *ngIf="version.min_happiness">Happiness {{version.min_happiness}}</span>
+              <span *ngIf="version.time_of_day">Time of day {{version.time_of_day}}</span>
+              <span *ngIf="version.item">Use {{version.item.name}}</span>
+              <span *ngIf="version.gender">
+                <span *ngIf="version.gender == 1"> female</span>
+                <span *ngIf="version.gender == 2"> male</span>
+              </span>
+              <span *ngIf="version.location">level up in {{version.location.name}}</span>
+              <span *ngIf="version.known_move">Knows {{version.known_move.name}}</span>
+              <span *ngIf="version.known_move_type">Knows a {{version.known_move_type.name}} type move</span>
+            </div>
+          </div>
+        </div>
 
-      <div *ngIf="stage.evolves_to.length !== 0">
-        <div *ngFor="let stage2 of stage.evolves_to">
-          {{stage2.species.name}}
-          <span *ngIf="stage2.evolution_details[0].item">{{stage2.evolution_details[0].item.name}}</span>
-          <span *ngIf="stage2.evolution_details[0].gender">
-            <span *ngIf="stage2.evolution_details[0].gender == 1">female</span>
-            <span *ngIf="stage2.evolution_details[0].gender == 2">male</span>
-          </span>
-          <span *ngIf="stage2.evolution_details[0].known_move">{{stage2.evolution_details[0].known_move.name}}</span>
+        <div *ngIf="stage2.evolves_to.length !== 0" class="thirdStages">
+          <div *ngFor="let stage3 of stage2.evolves_to">
+            <div class="stage">
+              <div routerLink="/pokemon/{{stage3.stage3Id}}" (click)="getPokemon(stage3.stage3Id)" class="stagePictureContainer">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/{{stage3.stage3Id}}.png" alt="" class="evolutionIMG">
+                {{stage3.species.name}}
+              </div>
+              <div class="evolutionConditions">
+                <div *ngFor="let version of stage3.evolution_details">
+                  <span *ngIf="version.min_level">Level {{version.min_level}}</span>
+                  <span *ngIf="version.min_happiness">Happiness {{version.min_happiness}}</span>
+                  <span *ngIf="version.item">Use {{version.item.name}}</span>
+                  <span *ngIf="version.gender">
+                    <span *ngIf="version.gender == 1"> female</span>
+                    <span *ngIf="version.gender == 2"> male</span>
+                  </span>
+                  <span *ngIf="version.known_move">Knows {{version.known_move.name}}</span>
+                  <span *ngIf="version.known_move_type">Knows a {{version.known_move_type.name}} type move</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 
+  <div class="movesTableController" (click)="isMovesTableHide = !isMovesTableHide">
+    <span *ngIf="isMovesTableHide">Show Move Table</span>
+    <span *ngIf="!isMovesTableHide">Hide Move Table</span>
+  </div>
   <div class="moveList">
+    <div class="moveList__title"><h2>Moves</h2></div>
+  </div>
+  <div class="moveList" *ngIf="!isMovesTableHide">
     <div class="moveList__header">
       <div>Move</div>
       <div>Version</div>
