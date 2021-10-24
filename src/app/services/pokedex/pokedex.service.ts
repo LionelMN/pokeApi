@@ -11,6 +11,7 @@ export class PokedexService {
 
   url : string = "https://pokeapi.co/api/v2/pokemon"
   selectedGeneration : string = "?offset=0&limit=151";
+  speciesUrl : string = "https://pokeapi.co/api/v2/pokemon-species";
 
   constructor(private http : HttpClient) { }
 
@@ -33,4 +34,13 @@ export class PokedexService {
   public getVersions() : Observable<any>{
     return this.http.get('https://pokeapi.co/api/v2/version-group/') as Observable<any>
   }
+
+  public getEvolutionChain(url) : Observable<any> {
+    return this.http.get(url) as Observable<any>
+  }
+
+  public getSpecies(id) : Observable<any> {
+    return this.http.get(`${this.speciesUrl}/${id}`) as Observable<any>
+  }
+
 }
