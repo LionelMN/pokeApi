@@ -70,16 +70,16 @@ export class PokemonViewComponent implements OnInit {
       var regex = /\d+/g;
       var matches = reg.match(regex);  // creates array from matches
       this.pokemon.evolution_chain.chain.stage1Id = matches[1];
-      for (let i = 0; i < [this.pokemon.evolution_chain.chain.evolves_to].length; i++){
+      for (let i = 0; i < this.pokemon.evolution_chain.chain.evolves_to.length; i++){
         let reg = this.pokemon.evolution_chain.chain.evolves_to[i].species.url
         var regex = /\d+/g;
-        var matches = reg.match(regex);  // creates array from matches
+        var matches : any = reg.match(regex);  // creates array from matches
         this.pokemon.evolution_chain.chain.evolves_to[i].stage2Id = matches[1];
         if (this.pokemon.evolution_chain.chain.evolves_to[i].evolves_to.length !== 0){
           for (let j = 0; j < this.pokemon.evolution_chain.chain.evolves_to[i].evolves_to.length; j++){
             let reg = this.pokemon.evolution_chain.chain.evolves_to[i].evolves_to[j].species.url
             var regex = /\d+/g;
-            var matches = reg.match(regex);  // creates array from matches
+            var matches : any = reg.match(regex);  // creates array from matches
             this.pokemon.evolution_chain.chain.evolves_to[i].evolves_to[j].stage3Id = matches[1];
           }
         }
