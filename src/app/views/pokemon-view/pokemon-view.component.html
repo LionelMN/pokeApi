@@ -40,9 +40,15 @@
     </div>
   </div>
 
-  <div class="evolutionChain"
-    [ngClass]="{'oneStage': pokemon.evolution_chain.chain.evolves_to.length === 0,
-                'twoStages': pokemon.evolution_chain.chain.evolves_to.length > 0,
+  <div class="evolutionChain oneStage" *ngIf="pokemon.evolution_chain.chain.evolves_to.length == 0" >
+    <div routerLink="/pokemon/{{pokemon.evolution_chain.chain.stage1Id}}" (click)="getPokemon(pokemon.evolution_chain.chain.stage1Id)" class="stagePictureContainer">
+      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/{{pokemon.evolution_chain.chain.stage1Id}}.png" alt="" class="evolutionIMG">
+      <span>{{pokemon.evolution_chain.chain.species.name}}</span>
+    </div>
+  </div>
+
+  <div class="evolutionChain" *ngIf="pokemon.evolution_chain.chain.evolves_to.length != 0"
+    [ngClass]="{'twoStages': pokemon.evolution_chain.chain.evolves_to.length > 0,
                 'threeStages': pokemon.evolution_chain.chain.evolves_to[0].evolves_to.length > 0}"
   >
     <div routerLink="/pokemon/{{pokemon.evolution_chain.chain.stage1Id}}" (click)="getPokemon(pokemon.evolution_chain.chain.stage1Id)" class="stagePictureContainer">
