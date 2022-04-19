@@ -1,0 +1,421 @@
+table.sprites{
+  text-align: center;
+  vertical-align: middle;
+  margin: 0.5rem;
+  padding: 0.5rem 0.1rem;
+  border-radius: 10px;
+  tr{
+    background: rgba(255, 255, 255, 0.4);
+    th {
+      width: 120rem;
+      border: 1px solid var(--terciary-bgColor);
+      border-radius: 5px;
+      font-weight: 900;
+      font-family: 'Karla';
+    }
+    td {
+      text-align: center;
+      width: 100rem;
+      border: 1px solid var(--terciary-bgColor);
+      margin: 0;
+      padding: 0.5rem;
+      font-family: 'Spectral';
+    }
+  }
+  .genOne{
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    &::before{
+      content: '';
+      position: absolute;
+      top: 2px;
+      left: 0px;
+      bottom: 2px;
+      width: 50%;
+      background: #ff0000;
+
+      z-index: -1;
+    }
+    &::after{
+      content: '';
+      position: absolute;
+      top: 2px;
+      right: 0px;
+      bottom: 2px;
+      width: 50%;
+      background: #0000ff;
+
+      z-index: -1;
+    }
+    .yellow{
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      &::after{
+        content: '';
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        right: 2px;
+        bottom: 2px;
+        width: 100%;
+        background: #ffff00;
+
+        z-index: -1;
+      }
+    }
+  }
+  .genTwo{
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    &::before{
+      content: '';
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      bottom: 2px;
+      width: 50%;
+      background: #ffd900;
+
+      z-index: -1;
+    }
+    &::after{
+      content: '';
+      position: absolute;
+      top: 2px;
+      right: 2px;
+      bottom: 2px;
+      width: 50%;
+      background: #c0c0c0;
+
+      z-index: -1;
+    }
+    .gold{
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      &::after{
+        content: '';
+        position: absolute;
+        top: 2px;
+        right: 2px;
+        bottom: 2px;
+        width: 50%;
+        background: #ffd900;
+
+        z-index: -1;
+      }
+    }
+    .silver{
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      &::after{
+        content: '';
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        bottom: 2px;
+        width: 50%;
+        background: #c0c0c0;
+
+        z-index: -1;
+      }
+    }
+    .crystal{
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      &::after{
+        content: '';
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        right: 2px;
+        bottom: 2px;
+        width: 100%;
+        background: #add8e6;
+
+        z-index: -1;
+      }
+    }
+  }
+  .genThree{
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    &::before{
+      content: '';
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      bottom: 2px;
+      width: 50%;
+      background: #dc143c;
+
+      z-index: -1;
+    }
+    &::after{
+      content: '';
+      position: absolute;
+      top: 2px;
+      right: 2px;
+      bottom: 2px;
+      width: 50%;
+      background: #0000ff;
+
+      z-index: -1;
+    }
+    .fireRedLeafGreen{
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      &::before{
+        content: '';
+        position: absolute;
+        top: 2px;
+        left: 0px;
+        bottom: 2px;
+        width: 50%;
+        background: #ff0000;
+
+        z-index: -1;
+      }
+      &::after{
+        content: '';
+        position: absolute;
+        top: 2px;
+        right: 0px;
+        bottom: 2px;
+        width: 50%;
+        background: #00b600;
+
+        z-index: -1;
+      }
+    }
+    .emerald{
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      &::before{
+        content: '';
+        position: absolute;
+        top: 2px;
+        left: 0px;
+        bottom: 2px;
+        width: 100%;
+        background: #008000;
+
+        z-index: -1;
+      }
+    }
+  }
+  .genFour{
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    &::before{
+      content: '';
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      bottom: 2px;
+      width: 50%;
+      background: #add8e6;
+
+      z-index: -1;
+    }
+    &::after{
+      content: '';
+      position: absolute;
+      top: 2px;
+      right: 2px;
+      bottom: 2px;
+      width: 50%;
+      background: #ffc0cb;
+
+      z-index: -1;
+    }
+    .platinum{
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      &::before{
+        content: '';
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        right: 2px;
+        bottom: 2px;
+        width: 100%;
+        background: #eee8aa;
+
+        z-index: -1;
+      }
+    }
+    .heartgoldSoulsilver{
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      &::before{
+        content: '';
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        bottom: 2px;
+        width: 50%;
+        background: #ffd900;
+
+        z-index: -1;
+      }
+      &::after{
+        content: '';
+        position: absolute;
+        top: 2px;
+        right: 2px;
+        bottom: 2px;
+        width: 50%;
+        background: #c0c0c0;
+
+        z-index: -1;
+      }
+    }
+  }
+  .genFive{
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    &::before{
+      content: '';
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      bottom: 2px;
+      width: 50%;
+      background: #000000;
+
+      z-index: -1;
+    }
+    &::after{
+      content: '';
+      position: absolute;
+      top: 2px;
+      right: 2px;
+      bottom: 2px;
+      width: 50%;
+      background: #ffffff;
+
+      z-index: -1;
+    }
+  }
+  .genSix{
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    &::before{
+      content: '';
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      bottom: 2px;
+      width: 50%;
+      background: #00008b;
+
+      z-index: -1;
+    }
+    &::after{
+      content: '';
+      position: absolute;
+      top: 2px;
+      right: 2px;
+      bottom: 2px;
+      width: 50%;
+      background: #8b0000;
+
+      z-index: -1;
+    }
+    .omegaAlpha{
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      &::before{
+        content: '';
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        bottom: 2px;
+        width: 50%;
+        background: #ff0000;
+
+        z-index: -1;
+      }
+      &::after{
+        content: '';
+        position: absolute;
+        top: 2px;
+        right: 2px;
+        bottom: 2px;
+        width: 50%;
+        background: #0000ff;
+
+        z-index: -1;
+      }
+    }
+  }
+  .genSeven{
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    &::before{
+      content: '';
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      bottom: 2px;
+      width: 50%;
+      background: #ffa600;
+
+      z-index: -1;
+    }
+    &::after{
+      content: '';
+      position: absolute;
+      top: 2px;
+      right: 2px;
+      bottom: 2px;
+      width: 50%;
+      background: #00008b;
+
+      z-index: -1;
+    }
+  }
+  .genEight{
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    &::before{
+      content: '';
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      bottom: 2px;
+      width: 50%;
+      background: #dc143c;
+
+      z-index: -1;
+    }
+    &::after{
+      content: '';
+      position: absolute;
+      top: 2px;
+      right: 2px;
+      bottom: 2px;
+      width: 50%;
+      background: #6494ed;
+
+      z-index: -1;
+    }
+  }
+}

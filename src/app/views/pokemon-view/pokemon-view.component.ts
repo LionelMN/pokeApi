@@ -6,7 +6,7 @@ import { PokedexService } from 'src/app/services/pokedex/pokedex.service';
 @Component({
   selector: 'app-pokemon-view',
   templateUrl: './pokemon-view.component.html',
-  styleUrls: ['./pokemon-view.component.scss'],
+  styleUrls: ['./pokemon-view.component.scss', 'tableSprites.scss'],
 })
 export class PokemonViewComponent implements OnInit {
 
